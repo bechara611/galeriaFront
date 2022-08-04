@@ -12,7 +12,7 @@ const InicioDeSesion = () => {
                    const resultadp= await ObtenerTodosLosUsuarios()
                     .then(data=>{return data})
                     .catch(error=>{return error})
-                    console.log(resultadp.data)
+                    console.log(resultadp)
                 }}>Login de usuario</h1>
                 <h3>{process.env.REACT_APP_BASEURL}</h3>
 

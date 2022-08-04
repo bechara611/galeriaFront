@@ -24,8 +24,8 @@ const ObtenerTodosLosUsuarios=async()=>{
     // }
   })
   const respuesta= await instance.get();
- return respuesta
+ 
 }
 
 
-export {ObtenerUsuarios,ObtenerTodosLosUsuarios}
+export {ObtenerUsuarios}
