@@ -1,23 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css'
-import InicioDeSesion from './components/Login';
+import Loginsesion from './components/InicioSesion';
 
 const Index = () => {
-  return ( 
-    <>
-    <InicioDeSesion />
-    </>
-   );
+    return ( 
+        <Loginsesion></Loginsesion>
+     );
 }
  
+
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <Index></Index>
+    <Loginsesion />
   </React.StrictMode>
 );
 
