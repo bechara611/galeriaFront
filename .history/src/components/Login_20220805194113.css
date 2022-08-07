@@ -1,0 +1,21 @@
+.fondo{
+    min-height: 100vh;
+    background: red;
+ 
+}
+
+.contenedor-login  {
+    border: 1px white solid;
+    border-radius: 10px;
+    background: white;
+    min-height: 50vh;
+
+}
+
+.centrar{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

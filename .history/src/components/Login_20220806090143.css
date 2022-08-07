@@ -1,0 +1,29 @@
+.fondo{
+    min-height: 100vh;
+    background: #f0e1e1;
+    background: linear-gradient(to bottom, rgba(135, 191, 243, 0.2) 0%, rgba(193, 149, 243, 0.6) 100%), 
+
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+
+ 
+}
+
+.contenedor-login  {
+    border: 1px rgba(245, 243, 243, 0.6) solid;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    min-height: 50vh;
+   
+}
+
+
+
+.centrar{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,11 @@
+.fondo{
+    min-height: 100vh;
+    background: red;
+}
+
+.contenedor-login  {
+    border: 1px black solid;
+    border-radius: 10px;
+    background: white;
+    min-height: 400px;
+}
