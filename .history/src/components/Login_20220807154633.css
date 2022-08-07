@@ -15,25 +15,15 @@
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.6);
     min-height: 50vh;
-
-    
-}
-.formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-   
    
 }
-
-.centrar2{
+.formulario{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+   
 }
 
 

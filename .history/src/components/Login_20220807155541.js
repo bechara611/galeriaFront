@@ -16,9 +16,9 @@ const InicioDeSesion = (div) => {
             <input type="email" placeholder="EMAIL" className='col-12 mb-2 form-control je' />
             <input type="password" placeholder="PASSWORD" className='col-12 form-control' />
             </div>
-             <div className="col-12 centrar2 mt-3">
-             <button className="btn btn-success col-8 mt-2">LOGIN</button>
-             <button className="btn btn-primary col-8 mt-2">REGISTER</button>
+             <div className="col-12 centrar2 mt-5">
+             <button className="btn btn-success col-12 mt-2">LOGIN</button>
+             <button className="btn btn-primary col-12 mt-2">REGISTER</button>
              </div>
              
             </form>
