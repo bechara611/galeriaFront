@@ -1,5 +1,4 @@
 //import { ObtenerTodosLosUsuarios } from "../helpers/Usuarios";
-import Boton from '../elementos/button';
 import './../components/Login.css'
 
 
@@ -21,8 +20,8 @@ const InicioDeSesion = (div) => {
              <button className="btn btn-success col-8 mt-2">LOGIN</button>
              <button className="btn btn-primary col-8 mt-2">REGISTER</button>
              </div>
-             <div className="centrar2 mt-5 col-12">
-            <Boton className='' >Recovery password</Boton>
+             <div className="centrar2 mt-5">
+             <button className='btn btn-outline-info'>RECOVERY PASSWORD</button>
              </div>
              
             </form>

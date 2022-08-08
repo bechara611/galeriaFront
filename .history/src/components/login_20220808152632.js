@@ -1,5 +1,4 @@
 //import { ObtenerTodosLosUsuarios } from "../helpers/Usuarios";
-import Boton from '../elementos/button';
 import './../components/Login.css'
 
 
@@ -13,7 +12,7 @@ const InicioDeSesion = (div) => {
           <div className="col-12 col-sm-8 col-md-5 my-2 contenedor-login">
             <form action="" className='mt-2 formulario'>
             <div className='col-12 centrar2 mb-2'><h3>Login</h3></div>
-            <div className="col-12 centrar2">
+            <div className="col-8 centrar2">
             <input type="email" placeholder="EMAIL" className='col-12 mb-2 form-control je' />
             <input type="password" placeholder="PASSWORD" className='col-12 form-control' />
             </div>
@@ -22,7 +21,7 @@ const InicioDeSesion = (div) => {
              <button className="btn btn-primary col-8 mt-2">REGISTER</button>
              </div>
              <div className="centrar2 mt-5 col-12">
-            <Boton className='' >Recovery password</Boton>
+             <button className='btn  col-6 recovery'>Recovery password </button>
              </div>
              
             </form>
