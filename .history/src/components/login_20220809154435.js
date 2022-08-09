@@ -6,7 +6,8 @@ import FormularioRegister from '../elementos/formularioRegister';
 import './../components/Login.css'
 
 const InicioDeSesion = (div) => {
-  const [register,cambiarRegister] = useState(false);
+  const [register,cambiarRegister] = useState(true);
+  const [register2,cambiarRegister2] = useState(true);
   return (
 
     <>
@@ -16,13 +17,13 @@ const InicioDeSesion = (div) => {
           <div className="col-12 col-sm-8 col-md-4 my-2 contenedor-login">
           {register ? 
             <>
-            <FormularioRegister register={register} cambiarRegister={cambiarRegister} ></FormularioRegister>
+            <FormularioRegister></FormularioRegister>
             </> 
             :
             
             <>
            
-            <FormularioLogin register={register} cambiarRegister={cambiarRegister}></FormularioLogin>
+            <FormularioLogin></FormularioLogin>
             </>
           }
          

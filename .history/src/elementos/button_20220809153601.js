@@ -49,32 +49,26 @@ const Boton= styled.button`
 	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
 	background-color:#ffffff;
 	border-radius:6px;
-	border:1px solid #dcdcdc;
+	border:1px solid #4e6096;
 	display:inline-block;
 	cursor:pointer;
-	color:#666666;
+	color:#ffffff;
 	font-family:Arial;
-	font-size:12px;
+	font-size:15px;
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
+	text-shadow:0px 1px 0px #283966;
     &:hover{
-        background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
+        background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
     }
     `}
 
-    @media ${`(max-width:226px )`} {
+    @media ${`(max-width:200px )`} {
         font-size:10px;
         text-align: center;
-        padding:12px;
-  }
-
-  @media ${`(max-width:168px )`} {
-        font-size:10px;
-        text-align: center;
-        padding:8px;
+        padding:0px;
   }
 
 

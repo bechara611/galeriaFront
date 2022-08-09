@@ -68,13 +68,7 @@ const Boton= styled.button`
     @media ${`(max-width:226px )`} {
         font-size:10px;
         text-align: center;
-        padding:12px;
-  }
-
-  @media ${`(max-width:168px )`} {
-        font-size:10px;
-        text-align: center;
-        padding:8px;
+        padding:10px;
   }
 
 

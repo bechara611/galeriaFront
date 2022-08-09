@@ -72,9 +72,9 @@ const Boton= styled.button`
   }
 
   @media ${`(max-width:168px )`} {
-        font-size:10px;
+        font-size:12px;
         text-align: center;
-        padding:8px;
+        padding:10px;
   }
 
 

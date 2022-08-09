@@ -1,24 +1,22 @@
 import Boton from "./button";
 
-const FormularioLogin = ({register,cambiarRegister}) => {
+const FormularioLogin = () => {
     return ( 
 
         <>
         <form action="" className='mt-2 formulario'>
-        <div className='col-12 centrar2 mb-2 tituloLogin'><h3>Login</h3></div>
+        <div className='col-12 centrar2 mb-2'><h3>Login</h3></div>
         <div className="col-12 centrar2">
         <input type="email" placeholder="EMAIL" className='col-12 mb-2 form-control je' />
         <input type="password" placeholder="PASSWORD" className='col-12 form-control' />
         </div>
          <div className="col-12 centrar2 mt-3">
-         <Boton fondoVerde className=" btn  col-8  mt-2">LOGIN</Boton>
-         <Boton fondoAzul className=" btn  col-8 mt-2" onClick={(e)=>{
-            e.preventDefault();
-            cambiarRegister(true)
-         }}>REGISTER</Boton>
+         <Boton fondoVerde>LOGIN</Boton>
+         <button className="btn btn-success col-8 mt-2">LOGIN</button>
+         <button className="btn btn-primary col-8 mt-2">REGISTER</button>
          </div>
-         <div className="centrar2 mt-2 col-6">
-        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 >Recovery password</Boton>
+         <div className="centrar2 mt-2 col-12">
+        <Boton className='' fondoBlanco >Recovery password</Boton>
          </div>
          
         </form>

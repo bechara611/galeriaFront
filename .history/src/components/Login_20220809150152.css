@@ -37,7 +37,6 @@
 }
 .recovery{
     background: rgb(149, 207, 229);
-
 }
 
 
@@ -54,4 +53,7 @@
 
 .tituloLogin{
 
+}
+*{
+    font-family: 'Courier New', Courier, monospace;
 }

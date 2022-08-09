@@ -1,7 +1,26 @@
 import styled,{css} from 'styled-components';
 
 const Boton= styled.button`
-
+box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+   
+   
+    ${props=>props.fondoNegro && css`
+    background: black;
+    color:#fff;
+    `}
     ${props=>props.fondoVerde && css`
     box-shadow:inset 0px 1px 0px 0px #3e7327;
 	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
@@ -22,7 +41,14 @@ const Boton= styled.button`
 	    background-color:#72b352;
     }
     `}
-    
+    ${props=>props.fondoBlanco && css`
+    font-size:12px;
+    &:hover
+    {
+        background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+    `
+    }
     ${props=>props.fondoAzul && css`
     box-shadow:inset 0px 1px 0px 0px #9fb4f2;
 	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
@@ -44,37 +70,10 @@ const Boton= styled.button`
     }
     `}
 
-    ${props=>props.fondoBlanco2 && css`
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:12px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-    &:hover{
-        background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
-    }
-    `}
-
-    @media ${`(max-width:226px )`} {
+    @media ${`(max-width:200px )`} {
         font-size:10px;
         text-align: center;
-        padding:12px;
-  }
-
-  @media ${`(max-width:168px )`} {
-        font-size:10px;
-        text-align: center;
-        padding:8px;
+        padding:0px;
   }
 
 

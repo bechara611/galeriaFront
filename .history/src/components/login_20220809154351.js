@@ -16,13 +16,11 @@ const InicioDeSesion = (div) => {
           <div className="col-12 col-sm-8 col-md-4 my-2 contenedor-login">
           {register ? 
             <>
-            <FormularioRegister register={register} cambiarRegister={cambiarRegister} ></FormularioRegister>
-            </> 
-            :
+            <FormularioRegister></FormularioRegister>
+            </> :
             
             <>
-           
-            <FormularioLogin register={register} cambiarRegister={cambiarRegister}></FormularioLogin>
+            <FormularioLogin></FormularioLogin>
             </>
           }
          

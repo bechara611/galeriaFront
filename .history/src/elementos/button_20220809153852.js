@@ -71,10 +71,10 @@ const Boton= styled.button`
         padding:12px;
   }
 
-  @media ${`(max-width:168px )`} {
-        font-size:10px;
+  @media ${`(max-width:166px )`} {
+        font-size:8px;
         text-align: center;
-        padding:8px;
+        padding:10px;
   }
 
 

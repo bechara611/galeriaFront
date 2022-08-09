@@ -1,6 +1,6 @@
 import Boton from "./button";
 
-const FormularioLogin = ({register,cambiarRegister}) => {
+const FormularioLogin = () => {
     return ( 
 
         <>
@@ -11,14 +11,11 @@ const FormularioLogin = ({register,cambiarRegister}) => {
         <input type="password" placeholder="PASSWORD" className='col-12 form-control' />
         </div>
          <div className="col-12 centrar2 mt-3">
-         <Boton fondoVerde className=" btn  col-8  mt-2">LOGIN</Boton>
-         <Boton fondoAzul className=" btn  col-8 mt-2" onClick={(e)=>{
-            e.preventDefault();
-            cambiarRegister(true)
-         }}>REGISTER</Boton>
+         <Boton fondoVerde className="col-8 col-sm-12 mt-2">LOGIN</Boton>
+         <Boton fondoAzul className="col-8 col-sm-12 mt-2">REGISTER</Boton>
          </div>
          <div className="centrar2 mt-2 col-6">
-        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 >Recovery password</Boton>
+        <Boton className='col-12 col-sm-12 recovery' fondoBlanco >Recovery password</Boton>
          </div>
          
         </form>

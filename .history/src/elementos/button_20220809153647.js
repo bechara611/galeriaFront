@@ -54,7 +54,7 @@ const Boton= styled.button`
 	cursor:pointer;
 	color:#666666;
 	font-family:Arial;
-	font-size:12px;
+	font-size:15px;
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
@@ -65,16 +65,10 @@ const Boton= styled.button`
     }
     `}
 
-    @media ${`(max-width:226px )`} {
+    @media ${`(max-width:200px )`} {
         font-size:10px;
         text-align: center;
-        padding:12px;
-  }
-
-  @media ${`(max-width:168px )`} {
-        font-size:10px;
-        text-align: center;
-        padding:8px;
+        padding:0px;
   }
 
 

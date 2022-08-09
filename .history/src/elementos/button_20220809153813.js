@@ -71,12 +71,6 @@ const Boton= styled.button`
         padding:12px;
   }
 
-  @media ${`(max-width:168px )`} {
-        font-size:10px;
-        text-align: center;
-        padding:8px;
-  }
-
 
 `
 

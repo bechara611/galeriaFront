@@ -6,7 +6,7 @@ import FormularioRegister from '../elementos/formularioRegister';
 import './../components/Login.css'
 
 const InicioDeSesion = (div) => {
-  const [register,cambiarRegister] = useState(false);
+  const [register,cambiarRegister] = useState(true);
   return (
 
     <>
