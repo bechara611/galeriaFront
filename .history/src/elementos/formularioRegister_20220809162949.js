@@ -1,6 +1,6 @@
 import Boton from "./button";
 
-const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje,cambiarRegister}) => {
+const FormularioRegister = ({register,cambiarRegister}) => {
     return ( 
 
         <>
@@ -18,14 +18,8 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
          </div>
          <div className="centrar2 mt-2 col-6 mb-2">
         <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 onClick={(e)=>{
-         
             e.preventDefault();
-            //localStorage.setItem('token','Dany Bechara es el token')
             cambiarRegister(false)
-          // cambiarTipoMensaje({tipo:'error',mensaje:'mensaje desde register'})
-           //cambiarEstadoAlerta(true);
-
-            
         }}>BACK</Boton>
          </div>
          

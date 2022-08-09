@@ -20,7 +20,7 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
         <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 onClick={(e)=>{
          
             e.preventDefault();
-            //localStorage.setItem('token','Dany Bechara es el token')
+            localStorage.setItem('token','Dany Bechara es el token')
             cambiarRegister(false)
           // cambiarTipoMensaje({tipo:'error',mensaje:'mensaje desde register'})
            //cambiarEstadoAlerta(true);

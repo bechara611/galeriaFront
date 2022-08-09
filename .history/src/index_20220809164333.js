@@ -5,17 +5,10 @@ import InicioDeSesion from './components/Login';
 import './index.css'
 import { useState } from 'react';
 const Index = () => {
-
-  const [estadoAlerta,cambiarEstadoAlerta]=useState(false);
-  const [tipoMensaje,cambiarTipoMensaje]=useState({tipo:'error',mensaje:'ERROR NOT FOUND'})
-  //tipo,mensaje,estadoAlerta, cambiarEstadoAlerta
+  const [mensaje,activarMensaje]=useState(false)
   return ( 
     <>
-    <InicioDeSesion 
-    estadoAlerta={estadoAlerta}
-     cambiarEstadoAlerta={cambiarEstadoAlerta}
-     tipoMensaje={tipoMensaje}
-     cambiarTipoMensaje={cambiarTipoMensaje}/>
+    <InicioDeSesion mensaje={mensaje} activarMensaje={activarMensaje} />
     </>
    );
 }

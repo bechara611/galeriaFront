@@ -7,15 +7,10 @@ import { useState } from 'react';
 const Index = () => {
 
   const [estadoAlerta,cambiarEstadoAlerta]=useState(false);
-  const [tipoMensaje,cambiarTipoMensaje]=useState({tipo:'error',mensaje:'ERROR NOT FOUND'})
   //tipo,mensaje,estadoAlerta, cambiarEstadoAlerta
   return ( 
     <>
-    <InicioDeSesion 
-    estadoAlerta={estadoAlerta}
-     cambiarEstadoAlerta={cambiarEstadoAlerta}
-     tipoMensaje={tipoMensaje}
-     cambiarTipoMensaje={cambiarTipoMensaje}/>
+    <InicioDeSesion estadoAlerta={estadoAlerta} cambiarEstadoAlerta={cambiarEstadoAlerta} />
     </>
    );
 }

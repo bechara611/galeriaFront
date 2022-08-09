@@ -1,12 +1,13 @@
 //import { ObtenerTodosLosUsuarios } from "../helpers/Usuarios";
 
 import { useState } from 'react';
-import Alerta from '../elementos/Alertas';
+import ContenedorAlerta from '../elementos/Alertas';
+import Alerta from '../elementos/Alertas2';
 import FormularioLogin from '../elementos/formularioLogin';
 import FormularioRegister from '../elementos/formularioRegister';
 import './../components/Login.css'
   //tipo,mensaje,estadoAlerta, cambiarEstadoAlerta
-const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTipoMensaje}) => {
+const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta}) => {
   const [register,cambiarRegister] = useState(false);
   return (
 
@@ -17,8 +18,8 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
         {estadoAlerta 
           ?
           <><Alerta estadoAlerta={estadoAlerta} cambiarEstadoAlerta={cambiarEstadoAlerta}
-          tipo={tipoMensaje.tipo}
-          mensaje={tipoMensaje.mensaje}
+          tipo={"error"}
+          mensaje={'MENSAJE AUTOMATICO'}
           ></Alerta></>
           :
           <></>
@@ -28,9 +29,7 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
           {register ? 
             <>
             <FormularioRegister register={register} cambiarRegister={cambiarRegister}
-            estadoAlerta={estadoAlerta}
-            cambiarEstadoAlerta={cambiarEstadoAlerta}
-            cambiarTipoMensaje={cambiarTipoMensaje}
+            activarMensaje={activarMensaje}
             ></FormularioRegister>
             </> 
             :

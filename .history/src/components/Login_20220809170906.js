@@ -1,7 +1,7 @@
 //import { ObtenerTodosLosUsuarios } from "../helpers/Usuarios";
 
 import { useState } from 'react';
-import Alerta from '../elementos/Alertas';
+import Alerta from '../elementos/Alertas2';
 import FormularioLogin from '../elementos/formularioLogin';
 import FormularioRegister from '../elementos/formularioRegister';
 import './../components/Login.css'
@@ -30,7 +30,6 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
             <FormularioRegister register={register} cambiarRegister={cambiarRegister}
             estadoAlerta={estadoAlerta}
             cambiarEstadoAlerta={cambiarEstadoAlerta}
-            cambiarTipoMensaje={cambiarTipoMensaje}
             ></FormularioRegister>
             </> 
             :

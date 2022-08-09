@@ -1,12 +1,12 @@
 //import { ObtenerTodosLosUsuarios } from "../helpers/Usuarios";
 
 import { useState } from 'react';
-import Alerta from '../elementos/Alertas';
+import ContenedorAlerta from '../elementos/Alertas';
 import FormularioLogin from '../elementos/formularioLogin';
 import FormularioRegister from '../elementos/formularioRegister';
 import './../components/Login.css'
-  //tipo,mensaje,estadoAlerta, cambiarEstadoAlerta
-const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTipoMensaje}) => {
+
+const InicioDeSesion = ({mensaje,activarMensaje}) => {
   const [register,cambiarRegister] = useState(false);
   return (
 
@@ -14,12 +14,9 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
     
       <div className="container-fluid fondo">
         <div className="row centrar p-2">
-        {estadoAlerta 
+        {mensaje 
           ?
-          <><Alerta estadoAlerta={estadoAlerta} cambiarEstadoAlerta={cambiarEstadoAlerta}
-          tipo={tipoMensaje.tipo}
-          mensaje={tipoMensaje.mensaje}
-          ></Alerta></>
+          <><ContenedorAlerta><p>ESTO ES UN MENSAJE AUTOMATICO</p></ContenedorAlerta></>
           :
           <></>
          }
@@ -28,9 +25,7 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
           {register ? 
             <>
             <FormularioRegister register={register} cambiarRegister={cambiarRegister}
-            estadoAlerta={estadoAlerta}
-            cambiarEstadoAlerta={cambiarEstadoAlerta}
-            cambiarTipoMensaje={cambiarTipoMensaje}
+            activarMensaje={activarMensaje}
             ></FormularioRegister>
             </> 
             :
