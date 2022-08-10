@@ -12,12 +12,8 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
     //  console.log(email)
     if (login===true) {
       const resultado = await getHacerLogin2(email,password)
-      .then(data=>{
-         localStorage.removeItem('token');
-         localStorage.setItem('token',data.data.Token)
-         return data.data
-      })
-      .catch(error=>{return error.response.data.errors.msg})
+      .then(data=>{return data.response.data})
+      .catch(error=>{return {error:error}})
       console.log(resultado)
       cambiarHizoLogin(false);
     //  cambiarHizoLogin(false)

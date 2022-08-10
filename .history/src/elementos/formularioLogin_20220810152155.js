@@ -13,11 +13,11 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
     if (login===true) {
       const resultado = await getHacerLogin2(email,password)
       .then(data=>{
-         localStorage.removeItem('token');
-         localStorage.setItem('token',data.data.Token)
+         console.log(data.Token)
+         localStorage.setItem('token',data.Token)
          return data.data
       })
-      .catch(error=>{return error.response.data.errors.msg})
+      .catch(error=>{return {error:error}})
       console.log(resultado)
       cambiarHizoLogin(false);
     //  cambiarHizoLogin(false)

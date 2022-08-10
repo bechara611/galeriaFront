@@ -5,19 +5,15 @@ import Boton from "./button";
 const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTipoMensaje}) => {
    const [email,cambiarEmail]=useState("");
    const [password,cambiarPassword]=useState("");
-   const [login,cambiarHizoLogin]=useState(false);
+   const [login,cambiarHizoLogin]=useState();
 
    useEffect(() => {
     async function Funcion(){
     //  console.log(email)
     if (login===true) {
       const resultado = await getHacerLogin2(email,password)
-      .then(data=>{
-         localStorage.removeItem('token');
-         localStorage.setItem('token',data.data.Token)
-         return data.data
-      })
-      .catch(error=>{return error.response.data.errors.msg})
+      .then(data=>{return data})
+      .catch(error=>{return error})
       console.log(resultado)
       cambiarHizoLogin(false);
     //  cambiarHizoLogin(false)

@@ -17,7 +17,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          localStorage.setItem('token',data.data.Token)
          return data.data
       })
-      .catch(error=>{return error.response.data.errors.msg})
+      .catch(error=>{return {error:error.response.data.errors.msg}})
       console.log(resultado)
       cambiarHizoLogin(false);
     //  cambiarHizoLogin(false)

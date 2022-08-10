@@ -1,33 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {  getHacerLogin2 } from "../helpers/peticiones";
 import Boton from "./button";
 
-const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTipoMensaje}) => {
+const FormularioLogin = ({register,cambiarRegister,cambiarEstadoAlerta,cambiarTipoMensaje}) => {
    const [email,cambiarEmail]=useState("");
    const [password,cambiarPassword]=useState("");
-   const [login,cambiarHizoLogin]=useState(false);
-
-   useEffect(() => {
-    async function Funcion(){
-    //  console.log(email)
-    if (login===true) {
-      const resultado = await getHacerLogin2(email,password)
-      .then(data=>{
-         localStorage.removeItem('token');
-         localStorage.setItem('token',data.data.Token)
-         return data.data
-      })
-      .catch(error=>{return error.response.data.errors.msg})
-      console.log(resultado)
-      cambiarHizoLogin(false);
-    //  cambiarHizoLogin(false)
-    }
-
-    }
-    Funcion();
-   // eslint-disable-next-line react-hooks/exhaustive-deps
-   },[login])
-   
    // estadoAlerta={estadoAlerta}
    //          cambiarEstadoAlerta={cambiarEstadoAlerta}
    //          cambiarTipoMensaje={cambiarTipoMensaje}
@@ -50,9 +27,8 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
                return
 
             }
-           
-            cambiarHizoLogin(true);
-            
+            const resultado = getHacerLogin2(email,password);
+            console.log(resultado)
          }}>LOGIN</Boton>
          <Boton fondoAzul className=" btn  col-8 mt-2" onClick={(e)=>{
             e.preventDefault();
