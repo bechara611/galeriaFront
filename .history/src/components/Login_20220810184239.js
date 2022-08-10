@@ -32,7 +32,7 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
             appear
             in
             classNames={'modal-transition'}
-            timeout={600}
+            timeout={300}
             >
             <FormularioRegister register={register} cambiarRegister={cambiarRegister}
             estadoAlerta={estadoAlerta}
@@ -40,8 +40,7 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
             cambiarTipoMensaje={cambiarTipoMensaje}
             className='claseEspecial'
             ></FormularioRegister>
-          </CSSTransition>
-           
+            </CSSTransition>
             </> 
             :
             
@@ -54,7 +53,7 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
             ></FormularioLogin>
             </>
           }
-       
+         
           </div>
         </div>
       </div>

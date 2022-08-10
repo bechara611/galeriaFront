@@ -64,9 +64,9 @@ text-shadow: 0px 0px 1px black;
 .modal-transition-appear{
     transition: transform 500ms;
 
-    transform: translateX(100%);
+    transform: translateX(-100%);
 }
 .modal-transition-appear-active{
  
-    transform: translateY(0);
+    
 }

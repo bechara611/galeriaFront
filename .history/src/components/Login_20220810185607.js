@@ -32,7 +32,7 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
             appear
             in
             classNames={'modal-transition'}
-            timeout={600}
+            timeout={500}
             >
             <FormularioRegister register={register} cambiarRegister={cambiarRegister}
             estadoAlerta={estadoAlerta}

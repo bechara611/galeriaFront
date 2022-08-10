@@ -24,23 +24,22 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
           :
           <></>
          }
-        
+         <CSSTransition
+         appear
+         in
+         classNames={'modal-transition'}
+         timeout={300}
+         >
           <div className="col-12 col-sm-8 col-md-4 my-2 contenedor-login">
           {register ? 
             <>
-            <CSSTransition
-            appear
-            in
-            classNames={'modal-transition'}
-            timeout={600}
-            >
+          
             <FormularioRegister register={register} cambiarRegister={cambiarRegister}
             estadoAlerta={estadoAlerta}
             cambiarEstadoAlerta={cambiarEstadoAlerta}
             cambiarTipoMensaje={cambiarTipoMensaje}
             className='claseEspecial'
             ></FormularioRegister>
-          </CSSTransition>
            
             </> 
             :
@@ -54,7 +53,7 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
             ></FormularioLogin>
             </>
           }
-       
+          </CSSTransition>
           </div>
         </div>
       </div>
