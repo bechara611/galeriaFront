@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Gallery from './components/GalleryMain';
 import { Helmet } from 'react-helmet';
-import favIcon from './imagenes/gallery.ico'
+import favIcon from './imagenes/gallery.png'
 const Index = () => {
 
    const [estadoAlerta, cambiarEstadoAlerta] = useState(false);
@@ -17,10 +17,10 @@ const Index = () => {
       <>
          <Helmet>
             <link rel='shorcut icon' href={favIcon} type='image/x-icon'></link>
-            <title>Gallery App</title>
+            <title>GalleryApp</title>
             <meta
-               name="Gallery App by Bechara "
-               content="Gallery App"
+               name=" "
+               content="GalleryApp"
             />
          </Helmet>
          <BrowserRouter>
@@ -35,12 +35,7 @@ const Index = () => {
                   cambiarEstadoAlerta={cambiarEstadoAlerta}
                   tipoMensaje={tipoMensaje}
                   cambiarTipoMensaje={cambiarTipoMensaje} />}></Route>
-               <Route path='/gallery' element={<Gallery
-                  estadoAlerta={estadoAlerta}
-                  cambiarEstadoAlerta={cambiarEstadoAlerta}
-                  tipoMensaje={tipoMensaje}
-                  cambiarTipoMensaje={cambiarTipoMensaje}
-                  ></Gallery>}></Route>
+               <Route path='/gallery' element={<Gallery></Gallery>}></Route>
             </Routes>
          </BrowserRouter>
 

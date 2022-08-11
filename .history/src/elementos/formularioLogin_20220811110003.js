@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import {  getHacerLogin2 } from "../helpers/peticiones";
 import Boton from "./button";
 
@@ -7,24 +6,16 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
    const [email,cambiarEmail]=useState("");
    const [password,cambiarPassword]=useState("");
    const [login,cambiarHizoLogin]=useState(false);
-   let navegar = useNavigate()
-   
+
    useEffect(() => {
-    
     async function Funcion(){
-     
     //  console.log(email)
     if (login===true) {
-      const resultado = await getHacerLogin2(email.toLowerCase(),password)
+      const resultado = await getHacerLogin2(email,password)
       .then(data=>{
-         if(data.data.Token){
-            localStorage.removeItem('token');
-            localStorage.setItem('token',data.data.Token)
-       
-         }
-         navegar('/Gallery');
+         localStorage.removeItem('token');
+         localStorage.setItem('token',data.data.Token)
          return data.data
-        
       })
       .catch(error=>{
          cambiarEstadoAlerta(true);
@@ -38,7 +29,9 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          cambiarEmail('')
          cambiarPassword('')
       }
-      
+      if(resultado){
+
+      }
       cambiarHizoLogin(false);
     //  cambiarHizoLogin(false)
     }
@@ -47,15 +40,6 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
     Funcion();
    // eslint-disable-next-line react-hooks/exhaustive-deps
    },[login])
-
-   useEffect(()=>{
-      let token= localStorage.getItem('token')
-      if(token){
-          console.log('recuerda que debes colocar el navigate a galeria si ya existe un token')
-          //navegar('/Gallery')
-      }
-      // eslint-disable-next-line
-   },[])
    
    // estadoAlerta={estadoAlerta}
    //          cambiarEstadoAlerta={cambiarEstadoAlerta}
@@ -89,9 +73,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          }}>REGISTER</Boton>
          </div>
          <div className="centrar2 mt-2 col-6">
-        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 onClick={(e)=>{
-         e.preventDefault();
-        }}>Recovery password</Boton>
+        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 >Recovery password</Boton>
          </div>
          
         </form>

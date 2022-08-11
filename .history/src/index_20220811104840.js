@@ -35,12 +35,7 @@ const Index = () => {
                   cambiarEstadoAlerta={cambiarEstadoAlerta}
                   tipoMensaje={tipoMensaje}
                   cambiarTipoMensaje={cambiarTipoMensaje} />}></Route>
-               <Route path='/gallery' element={<Gallery
-                  estadoAlerta={estadoAlerta}
-                  cambiarEstadoAlerta={cambiarEstadoAlerta}
-                  tipoMensaje={tipoMensaje}
-                  cambiarTipoMensaje={cambiarTipoMensaje}
-                  ></Gallery>}></Route>
+               <Route path='/gallery' element={<Gallery></Gallery>}></Route>
             </Routes>
          </BrowserRouter>
 

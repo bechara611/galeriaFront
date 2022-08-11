@@ -22,14 +22,8 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
         <input type="password" placeholder="REPEAT PASSWORD" className='col-12 form-control' required/>
         </div>
          <div className="col-12 centrar2 mt-3 mb-2">
-         <Boton className='btn  col-8 ' fondoVerde onClick={(e)=>{
+         <Boton className='btn  col-8  mt-4' fondoVerde onClick={(e)=>{
             e.preventDefault();
-            // if(!email || !password || email==='' || password==='' ){
-            //     cambiarEstadoAlerta(true);
-            //     cambiarTipoMensaje({tipo:"error",mensaje:"PLEASE, INSERT YOUR LOGIN DATA"})
-            //     return
- 
-            //  }
             cambiarfetchRegistrar(true)
            }}>REGISTER</Boton>
         

@@ -51,7 +51,8 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
    useEffect(()=>{
       let token= localStorage.getItem('token')
       if(token){
-          console.log('recuerda que debes colocar el navigate a galeria si ya existe un token')
+          cambiarEstadoAlerta(true);
+          cambiarTipoMensaje({tipo:'exito',mensaje:'LOGIN SUCCESS'})
           //navegar('/Gallery')
       }
       // eslint-disable-next-line
@@ -89,9 +90,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          }}>REGISTER</Boton>
          </div>
          <div className="centrar2 mt-2 col-6">
-        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 onClick={(e)=>{
-         e.preventDefault();
-        }}>Recovery password</Boton>
+        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 >Recovery password</Boton>
          </div>
          
         </form>

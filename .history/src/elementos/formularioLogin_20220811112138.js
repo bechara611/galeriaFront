@@ -15,7 +15,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
      
     //  console.log(email)
     if (login===true) {
-      const resultado = await getHacerLogin2(email.toLowerCase(),password)
+      const resultado = await getHacerLogin2(email,password)
       .then(data=>{
          if(data.data.Token){
             localStorage.removeItem('token');
@@ -47,15 +47,6 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
     Funcion();
    // eslint-disable-next-line react-hooks/exhaustive-deps
    },[login])
-
-   useEffect(()=>{
-      let token= localStorage.getItem('token')
-      if(token){
-          console.log('recuerda que debes colocar el navigate a galeria si ya existe un token')
-          //navegar('/Gallery')
-      }
-      // eslint-disable-next-line
-   },[])
    
    // estadoAlerta={estadoAlerta}
    //          cambiarEstadoAlerta={cambiarEstadoAlerta}
@@ -89,9 +80,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          }}>REGISTER</Boton>
          </div>
          <div className="centrar2 mt-2 col-6">
-        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 onClick={(e)=>{
-         e.preventDefault();
-        }}>Recovery password</Boton>
+        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 >Recovery password</Boton>
          </div>
          
         </form>

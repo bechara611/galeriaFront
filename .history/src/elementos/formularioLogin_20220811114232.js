@@ -89,9 +89,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          }}>REGISTER</Boton>
          </div>
          <div className="centrar2 mt-2 col-6">
-        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 onClick={(e)=>{
-         e.preventDefault();
-        }}>Recovery password</Boton>
+        <Boton className='col-12 col-sm-12 recovery' fondoBlanco2 >Recovery password</Boton>
          </div>
          
         </form>

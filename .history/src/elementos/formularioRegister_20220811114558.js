@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import Boton from "./button";
 
 const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje,cambiarRegister}) => {
-    const [fetchRegistrar,cambiarfetchRegistrar]=useState(false);
+    const [registrar,cambiarRegistrar]=useState(false);
     useEffect(()=>{
-        if(fetchRegistrar===true){
+        if(registrar===true){
             console.log('SI REGISTRO')
-            cambiarfetchRegistrar(false)
+            cambiarRegister(false)
         }
         // eslint-disable-next-line
-    },[fetchRegistrar])
+    },[registrar])
   
     return ( 
 
@@ -22,16 +22,10 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
         <input type="password" placeholder="REPEAT PASSWORD" className='col-12 form-control' required/>
         </div>
          <div className="col-12 centrar2 mt-3 mb-2">
-         <Boton className='btn  col-8 ' fondoVerde onClick={(e)=>{
+         <Boton fondoVerde className=" btn  col-8  mt-4" onClick={(e)=>{
             e.preventDefault();
-            // if(!email || !password || email==='' || password==='' ){
-            //     cambiarEstadoAlerta(true);
-            //     cambiarTipoMensaje({tipo:"error",mensaje:"PLEASE, INSERT YOUR LOGIN DATA"})
-            //     return
- 
-            //  }
-            cambiarfetchRegistrar(true)
-           }}>REGISTER</Boton>
+            cambiarRegistrar(true)
+         }}>CREATE</Boton>
         
         
          </div>
@@ -46,7 +40,6 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
 
             
         }}>BACK</Boton>
-      
          </div>
          
         </form>
