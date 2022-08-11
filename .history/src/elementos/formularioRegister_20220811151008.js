@@ -14,7 +14,7 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
     useEffect(()=>{
         async function metodo(){
             if(fetchRegistrar===true){
-                 await postRegistrarUsuario(nombre.toUpperCase(),email.toLowerCase(),password1)
+                await postRegistrarUsuario(nombre.toUpperCase(),email.toLowerCase(),password1)
                 .then((data)=>{
                     cambiarEstadoAlerta(true);
                     //"Email already exists"

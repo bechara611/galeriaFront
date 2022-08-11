@@ -61,7 +61,6 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
    useEffect(()=>{
       if(recovery===true){
          console.log('recovery')
-         cambiarRecovery(false)
       }
       
       // eslint-disable-next-line

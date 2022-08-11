@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { getHacerLogin2, postRegistrarUsuario } from "../helpers/peticiones";
-import { useNavigate } from "react-router-dom";
+import { postRegistrarUsuario } from "../helpers/peticiones";
 import Boton from "./button";
 
 const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje,cambiarRegister}) => {
@@ -9,29 +8,28 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
     const [email,cambiarEmail]=useState('')
     const [password1,cambiarPassword1]=useState('')
     const [password2,cambiarPassword2]=useState('')
-    const [hizologin,cambiarHizoLogin]=useState(false)
-    let navegar = useNavigate()
     useEffect(()=>{
         async function metodo(){
             if(fetchRegistrar===true){
-                 await postRegistrarUsuario(nombre.toUpperCase(),email.toLowerCase(),password1)
+                const resultado = await postRegistrarUsuario(nombre.toUpperCase(),email.toLowerCase(),password1)
                 .then((data)=>{
                     cambiarEstadoAlerta(true);
                     //"Email already exists"
-                   
-                    
-                      cambiarTipoMensaje({tipo:"exito",mensaje:"SUCCESS"})
-                      cambiarHizoLogin(true)
+                    console.log(data.response.data.errors.msg)
+                    if(data.response.data.errors.msg==="Email already exists"){
+                        cambiarTipoMensaje({tipo:"error",mensaje:data.response.data.errors.msg})
+                    }else
+                    {  cambiarTipoMensaje({tipo:"exito",mensaje:"SUCCESS"})}
+               
                     return data
                     
                 })
                 .catch((error)=>{
                     cambiarEstadoAlerta(true);
                     if(error.response.data.errors.length>0){cambiarTipoMensaje({tipo:"error",mensaje:error.response.data.errors[0].msg})}
-                    else if(error.response.data.errors.length===0){cambiarTipoMensaje({tipo:"error",mensaje:error.response.data.errors.msg})}
-                    else{ cambiarTipoMensaje({tipo:"error",mensaje:error.response.data.errors.msg})}
+                    if(error.response.data.errors.length===0){cambiarTipoMensaje({tipo:"error",mensaje:error.response.data.errors.msg})}
                     return error})
-               
+                console.log(resultado)
                 //console.log('SI REGISTRO')
                 cambiarfetchRegistrar(false)
             }
@@ -39,44 +37,6 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
        metodo()
         // eslint-disable-next-line
     },[fetchRegistrar])
-
-
-    useEffect(() => {
-    
-        async function Funcion(){
-         
-        //  console.log(email)
-        if (hizologin===true) {
-          const resultado = await getHacerLogin2(email.toLowerCase(),password1)
-          .then(data=>{
-             if(data.data.Token){
-                localStorage.removeItem('token');
-                localStorage.setItem('token',data.data.Token)
-           
-             }
-             navegar('/Gallery');
-             return data.data
-            
-          })
-          .catch(error=>{
-             cambiarEstadoAlerta(true);
-             cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors.msg})
-             return error.response.data.errors.msg
-          })
-         
-          if(!resultado){
-             cambiarEstadoAlerta(true);
-             cambiarTipoMensaje({tipo:'error',mensaje:'Error,Check your data'})
-          }
-          
-          cambiarHizoLogin(false);
-        //  cambiarHizoLogin(false)
-        }
-    
-        }
-        Funcion();
-       // eslint-disable-next-line react-hooks/exhaustive-deps
-       },[hizologin])
   
     return ( 
 

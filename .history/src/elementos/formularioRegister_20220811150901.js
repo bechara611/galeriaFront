@@ -14,14 +14,14 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
     useEffect(()=>{
         async function metodo(){
             if(fetchRegistrar===true){
-                 await postRegistrarUsuario(nombre.toUpperCase(),email.toLowerCase(),password1)
+                const resultado = await postRegistrarUsuario(nombre.toUpperCase(),email.toLowerCase(),password1)
                 .then((data)=>{
                     cambiarEstadoAlerta(true);
                     //"Email already exists"
                    
                     
                       cambiarTipoMensaje({tipo:"exito",mensaje:"SUCCESS"})
-                      cambiarHizoLogin(true)
+               
                     return data
                     
                 })
@@ -76,7 +76,7 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
         }
         Funcion();
        // eslint-disable-next-line react-hooks/exhaustive-deps
-       },[hizologin])
+       },[login])
   
     return ( 
 

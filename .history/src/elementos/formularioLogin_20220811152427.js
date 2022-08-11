@@ -57,15 +57,6 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
       }
       // eslint-disable-next-line
    },[])
-
-   useEffect(()=>{
-      if(recovery===true){
-         console.log('recovery')
-         cambiarRecovery(false)
-      }
-      
-      // eslint-disable-next-line
-   },[recovery])
    
 
     return ( 

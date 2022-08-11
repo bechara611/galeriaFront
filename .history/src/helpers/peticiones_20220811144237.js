@@ -53,11 +53,13 @@ const getHacerLogin2=async(email,password)=>{
 
 
 
-const postRegistrarUsuario=async(name,email,password)=>{
+const postRegistrarUsuario2=async(name,email,password)=>{
     return new Promise(async(resolve,reject)=>{
         //process.env.REACT_APP_BACK+'api/usuario/',
         try {
-            
+            console.log(name)
+            console.log(password)
+            console.log(email)
             const body={nombre:name,correo:email,password:password}
             const response = await axios.post(process.env.REACT_APP_BACK+'api/usuario/', body)
             
@@ -75,31 +77,4 @@ const postRegistrarUsuario=async(name,email,password)=>{
     
 }
 
-
-const getRecoveryPassword=async(email)=>{
-    return new Promise(async(resolve,reject)=>{
-        try {
-            const instance= axios.create({
-                baseURL:process.env.REACT_APP_BACK+'api/usuario/recuperar/',
-                method:'POST',
-                params:{
-                    'email':email,
-                }
-            })
-            const respuesta= await instance.post();
-            
-            
-            resolve(respuesta)
-            return respuesta;
-        } catch (error) {
-          
-            reject(error)
-        }
-       
-    })
-   
-    
-    
-}
-
-export {GetHacerLogin,getHacerLogin2,postRegistrarUsuario,getRecoveryPassword}
+export {GetHacerLogin,getHacerLogin2,postRegistrarUsuario2}
