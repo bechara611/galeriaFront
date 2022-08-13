@@ -82,7 +82,7 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
 
         <>
         <form action="" className='mt-2 formulario'>
-        <div className='col-12 centrar2 mb-2 tituloLogin'><p className='pregister'>Register</p></div>
+        <div className='col-12 centrar2 mb-2 tituloLogin'><p>REGISTER</p></div>
         <div className="col-12 centrar2">
         <input type="text" placeholder="NAME" className='col-12 mb-1 form-control je control-imput' value={nombre} required onChange={(e)=>{
             cambiarNombre(e.target.value);

@@ -75,7 +75,7 @@ margin-bottom: 5px;
   }
 
   @media ${`(max-width:168px )`} {
-        font-size:9px;
+        font-size:1px;
         text-align: center;
         padding:8px;
 		overflow-wrap: normal;

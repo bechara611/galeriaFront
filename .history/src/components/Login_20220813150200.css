@@ -54,12 +54,11 @@
 
 .tituloLogin .plogin::first-letter{
     font-size: 130%;
-    font-family: cursive;
+    
 
 }
 .tituloLogin .pregister::first-letter{
     font-size: 130%;
-    font-family: cursive;
     
 
 }
@@ -67,7 +66,6 @@
 
 .tituloLogin p  {
    font-size: 40px;
-   color: rgb(43, 93, 122);
 }
 
 

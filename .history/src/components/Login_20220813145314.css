@@ -52,24 +52,10 @@
 
 
 
-.tituloLogin .plogin::first-letter{
+.tituloLogin p::first-letter{
     font-size: 130%;
-    font-family: cursive;
 
 }
-.tituloLogin .pregister::first-letter{
-    font-size: 130%;
-    font-family: cursive;
-    
-
-}
-
-
-.tituloLogin p  {
-   font-size: 40px;
-   color: rgb(43, 93, 122);
-}
-
 
 .claseEspecial{
     transition: all 4s ease ;
@@ -85,11 +71,8 @@
     transform: translateY(0);
 }
 
-@media(max-width:200px){
+@media(max-width:170px){
     .control-imput{
         font-size: 11px;
     }
-    .tituloLogin p  {
-        font-size: 30px;
-     }
 }

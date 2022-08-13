@@ -34,7 +34,7 @@ const ContenedorAlerta = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: ${slideDown} 4s ease;
+    animation: ${slideDown} 4s ease ;
  
     p {
  

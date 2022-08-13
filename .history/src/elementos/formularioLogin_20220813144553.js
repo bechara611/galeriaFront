@@ -72,7 +72,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
 
         <>
         <form action="" className='mt-2 formulario'>
-        <div className='col-12 centrar2 mb-2 tituloLogin'><p className='plogin'>Login</p></div>
+        <div className='col-12 centrar2 mb-2 tituloLogin'><h3>Login</h3></div>
         <div className="col-12 centrar2">
         <input type="email" placeholder="EMAIL" className='col-12 mb-2 form-control control-imput' required value={email} onChange={(e)=>{cambiarEmail(e.target.value)}}/>
         <input type="password" placeholder="PASSWORD" className='col-12 form-control control-imput' required value={password} onChange={(e)=>{cambiarPassword(e.target.value)}} />

@@ -61,10 +61,9 @@ margin-bottom: 5px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
     &:hover{
-        background:linear-gradient(to bottom, #f2f6f3 5%, #ffffff 100%);
+        background:linear-gradient(to bottom, #f6f6f3 5%, #ffffff 100%);
 	background-color:#f6f6f6;
     }
-
     `}
 
     @media ${`(max-width:226px )`} {
@@ -82,7 +81,7 @@ margin-bottom: 5px;
 		justify-content: center;
    align-self: center;
    align-items: center;		
-   width: 70vw;
+   width: 40vw;
   }
 
 
