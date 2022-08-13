@@ -53,8 +53,9 @@
 
 
 .tituloLogin .plogin::first-letter{
-    font-size: 130%;
-  
+   
+    font-weight: lighter;
+    font-style: oblique;
     /* font-family: cursive; */
 
 }

@@ -74,7 +74,7 @@ width: 51%;
 		
   }
 
-  @media ${`(max-width:279px )`} {
+  @media ${`(max-width:168px )`} {
         font-size:9px;
         text-align: center;
         padding:8px;

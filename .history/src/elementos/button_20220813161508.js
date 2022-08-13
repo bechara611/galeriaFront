@@ -2,7 +2,7 @@ import styled,{css} from 'styled-components';
 
 const Boton= styled.button`
 margin-bottom: 5px;
-width: 51%;
+width: 60%;
     ${props=>props.fondoVerde && css`
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-shadow:inset 0px 1px 0px 0px #3e7327;
@@ -50,7 +50,7 @@ width: 51%;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	border-radius: 600px;
 	background: rgb(2,102,213,0);
-	width: 100%;
+	
 	border:0px solid rgb(2,102,213,0);
 	display:inline-block;
 	cursor:pointer;
@@ -74,7 +74,7 @@ width: 51%;
 		
   }
 
-  @media ${`(max-width:279px )`} {
+  @media ${`(max-width:168px )`} {
         font-size:9px;
         text-align: center;
         padding:8px;

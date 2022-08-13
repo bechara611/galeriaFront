@@ -2,14 +2,14 @@ import styled,{css} from 'styled-components';
 
 const Boton= styled.button`
 margin-bottom: 5px;
-width: 51%;
+		
     ${props=>props.fondoVerde && css`
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-shadow:inset 0px 1px 0px 0px #3e7327;
 	/* background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%); */
 	background: rgb(14,171,80);
-	border-radius: 600px;
 	
+	border-radius:600px;
 	border:1px solid rgb(14,171,80);
 	display:inline-block;
 	cursor:pointer;
@@ -19,7 +19,7 @@ width: 51%;
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-	
+	text-shadow:0px 1px 0px #5b8a3c;
     &:hover{
         background: rgb(15,171,80);
     }
@@ -27,10 +27,10 @@ width: 51%;
     
     ${props=>props.fondoAzul && css`
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-radius: 600px;
+   
 	background: rgb(2,102,213);
 	
-	
+	border-radius:600px;
 	border:1px solid rgb(2,102,213);
 	display:inline-block;
 	cursor:pointer;
@@ -48,13 +48,13 @@ width: 51%;
 
     ${props=>props.fondoBlanco2 && css`
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	border-radius: 600px;
+	
 	background: rgb(2,102,213,0);
-	width: 100%;
+	
 	border:0px solid rgb(2,102,213,0);
 	display:inline-block;
 	cursor:pointer;
-	color: rgb(70, 116, 243);
+	color: rgb(114, 141, 216);
 	font-family:Arial;
 	font-size:12px;
 	font-weight:bold;
@@ -74,7 +74,7 @@ width: 51%;
 		
   }
 
-  @media ${`(max-width:279px )`} {
+  @media ${`(max-width:168px )`} {
         font-size:9px;
         text-align: center;
         padding:8px;

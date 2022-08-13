@@ -55,7 +55,7 @@
 .tituloLogin .plogin::first-letter{
     font-size: 130%;
   
-    /* font-family: cursive; */
+     font-family: cursive; 
 
 }
 .tituloLogin .pregister::first-letter{
