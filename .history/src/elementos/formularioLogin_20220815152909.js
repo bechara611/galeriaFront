@@ -71,7 +71,6 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          cambiarEstadoAlerta(true);
          cambiarTipoMensaje({tipo:'exito',mensaje:resultado.data.msg})
          cambiarEmail('')
-         todo.style.cursor = "default";
          return resultado})
       .catch(error=>{
          if(error.response.data.errors.length>0){

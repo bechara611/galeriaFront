@@ -63,15 +63,13 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
       async function ejecutar(){
       if(recovery===true){
         const todo = document.getElementById('root');
-        todo.style.cursor = "progress";
-      
+        todo.style("cursor", "progress");
         
       await getRecoveryPassword(email)
       .then(resultado=>{
          cambiarEstadoAlerta(true);
          cambiarTipoMensaje({tipo:'exito',mensaje:resultado.data.msg})
          cambiarEmail('')
-         todo.style.cursor = "default";
          return resultado})
       .catch(error=>{
          if(error.response.data.errors.length>0){
