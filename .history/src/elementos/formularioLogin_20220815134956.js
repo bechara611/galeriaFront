@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {  getHacerLogin2, getRecoveryPassword } from "../helpers/peticiones";
+import {  getHacerLogin2 } from "../helpers/peticiones";
 import Boton from "./button";
 
 const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTipoMensaje}) => {
@@ -60,37 +60,11 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
 
    //useeffect para la parte de recuperacion de password
    useEffect(()=>{
-      async function ejecutar(){
       if(recovery===true){
-    
-      await getRecoveryPassword(email)
-      .then(resultado=>{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'exito',mensaje:resultado.data.msg})
-         return resultado})
-      .catch(error=>{
-         if(error.response.data.errors.length>0){
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors[0].msg})
-         return error.response.data.errors.msg
-      }
-      else{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors.msg})
-         return null
-      }
-        })
-      }
-
-         
+         console.log('recovery')
          cambiarRecovery(false)
-      
-        
       }
       
-         ejecutar();
-      
-     
       // eslint-disable-next-line
    },[recovery])
    
@@ -129,7 +103,6 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          if(!email  || email==='' ){
             cambiarEstadoAlerta(true);
             cambiarTipoMensaje({tipo:"error",mensaje:"PLEASE, INSERT YOUR EMAIL"})
-            return;
          }
          cambiarRecovery(true);
         }}>Forgot password?</Boton>

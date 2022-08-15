@@ -66,7 +66,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
       await getRecoveryPassword(email)
       .then(resultado=>{
          cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'exito',mensaje:resultado.data.msg})
+         cambiarTipoMensaje({tipo:'exito',mensaje:resultado.response.data.msg})
          return resultado})
       .catch(error=>{
          if(error.response.data.errors.length>0){

@@ -65,20 +65,12 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
     
       await getRecoveryPassword(email)
       .then(resultado=>{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'exito',mensaje:resultado.data.msg})
+         console.log(resultado)
          return resultado})
       .catch(error=>{
-         if(error.response.data.errors.length>0){
          cambiarEstadoAlerta(true);
          cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors[0].msg})
          return error.response.data.errors.msg
-      }
-      else{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors.msg})
-         return null
-      }
         })
       }
 

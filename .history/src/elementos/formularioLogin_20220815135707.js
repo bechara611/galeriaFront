@@ -60,37 +60,23 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
 
    //useeffect para la parte de recuperacion de password
    useEffect(()=>{
-      async function ejecutar(){
-      if(recovery===true){
-    
+      if(recovery===true && !email  && email==='' ){
+     async function ejecutar(){
       await getRecoveryPassword(email)
       .then(resultado=>{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'exito',mensaje:resultado.data.msg})
+         console.log(resultado)
          return resultado})
       .catch(error=>{
-         if(error.response.data.errors.length>0){
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors[0].msg})
-         return error.response.data.errors.msg
-      }
-      else{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors.msg})
-         return null
-      }
-        })
+         console.log(error)
+         return error})
       }
 
-         
+         console.log('recovery')
          cambiarRecovery(false)
       
-        
+         ejecutar();
       }
       
-         ejecutar();
-      
-     
       // eslint-disable-next-line
    },[recovery])
    
@@ -129,7 +115,6 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          if(!email  || email==='' ){
             cambiarEstadoAlerta(true);
             cambiarTipoMensaje({tipo:"error",mensaje:"PLEASE, INSERT YOUR EMAIL"})
-            return;
          }
          cambiarRecovery(true);
         }}>Forgot password?</Boton>

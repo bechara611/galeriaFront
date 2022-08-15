@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {  getHacerLogin2, getRecoveryPassword } from "../helpers/peticiones";
+import {  getHacerLogin2 } from "../helpers/peticiones";
 import Boton from "./button";
 
 const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTipoMensaje}) => {
@@ -58,39 +58,12 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
       // eslint-disable-next-line
    },[])
 
-   //useeffect para la parte de recuperacion de password
    useEffect(()=>{
-      async function ejecutar(){
       if(recovery===true){
-    
-      await getRecoveryPassword(email)
-      .then(resultado=>{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'exito',mensaje:resultado.data.msg})
-         return resultado})
-      .catch(error=>{
-         if(error.response.data.errors.length>0){
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors[0].msg})
-         return error.response.data.errors.msg
-      }
-      else{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors.msg})
-         return null
-      }
-        })
-      }
-
-         
+         console.log('recovery')
          cambiarRecovery(false)
-      
-        
       }
       
-         ejecutar();
-      
-     
       // eslint-disable-next-line
    },[recovery])
    
@@ -99,10 +72,10 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
 
         <>
         <form action="" className='mt-2 formulario'>
-        <div className='col-12 centrar2 mb-2 tituloLogin'><p className='plogin'>Login</p></div>
+        <div className='col-12 centrar2 mb-2 tituloLogin'><h3>Login</h3></div>
         <div className="col-12 centrar2">
-        <input type="email" placeholder="EMAIL" className='col-12 mb-2 form-control control-imput' required value={email} onChange={(e)=>{cambiarEmail(e.target.value)}}/>
-        <input type="password" placeholder="PASSWORD" className='col-12 form-control control-imput' required value={password} onChange={(e)=>{cambiarPassword(e.target.value)}} />
+        <input type="email" placeholder="EMAIL" id="a" className='col-12 mb-2 form-control je' required value={email} onChange={(e)=>{cambiarEmail(e.target.value)}}/>
+        <input type="password" placeholder="PASSWORD" className='col-12 form-control' required value={password} onChange={(e)=>{cambiarPassword(e.target.value)}} />
         </div>
          <div className="col-12 centrar2 mt-3">
          <Boton fondoVerde className=" btn  col-8  mt-2" onClick={(e)=>{
@@ -129,10 +102,12 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          if(!email  || email==='' ){
             cambiarEstadoAlerta(true);
             cambiarTipoMensaje({tipo:"error",mensaje:"PLEASE, INSERT YOUR EMAIL"})
-            return;
+            const a= document.getElementById('#a');
+            a.focus;
+            return
          }
          cambiarRecovery(true);
-        }}>Forgot password?</Boton>
+        }}>Recovery password</Boton>
          </div>
          
         </form>

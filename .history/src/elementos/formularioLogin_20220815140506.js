@@ -7,7 +7,7 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
    const [email,cambiarEmail]=useState("");
    const [password,cambiarPassword]=useState("");
    const [login,cambiarHizoLogin]=useState(false);
-   const [recovery,cambiarRecovery]=useState(false);
+   const [recovery,cambiarRecovery]=useState(null);
    let navegar = useNavigate()
    
    useEffect(() => {
@@ -61,35 +61,25 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
    //useeffect para la parte de recuperacion de password
    useEffect(()=>{
       async function ejecutar(){
-      if(recovery===true){
+      if(recovery===true && !email  && email!=='' ){
     
       await getRecoveryPassword(email)
       .then(resultado=>{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'exito',mensaje:resultado.data.msg})
+         console.log(resultado)
          return resultado})
       .catch(error=>{
-         if(error.response.data.errors.length>0){
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors[0].msg})
-         return error.response.data.errors.msg
-      }
-      else{
-         cambiarEstadoAlerta(true);
-         cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors.msg})
-         return null
-      }
-        })
+         console.log(error)
+         return error})
       }
 
-         
-         cambiarRecovery(false)
+         console.log('recovery')
+         cambiarRecovery(null)
       
         
       }
-      
+      if(recovery===true && !email  && email==='' ){
          ejecutar();
-      
+      }
      
       // eslint-disable-next-line
    },[recovery])
