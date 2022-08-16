@@ -1,0 +1,8 @@
+.contenedor-header{
+    background: red;
+    min-height: 20vh;
+}
+.contenedor-menu{
+    background: wheat;
+    max-width: 30vw;
+}

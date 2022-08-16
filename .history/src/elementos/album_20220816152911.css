@@ -1,0 +1,29 @@
+.seccion-subir-fotos{
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 10vh;
+    padding: 5px;
+    background: red;
+}
+
+.contenedor-subir-fotos{
+    background: white;
+   min-height: 100vh;
+}
+
+
+.contenedor-fotos{
+    background: rgba(255, 255, 255,1);
+    min-height: 50vh;
+    max-height: 50vh;
+    max-width: 100vw;
+    border: rgb(211, 210, 210,.5) solid 2px;
+    margin: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}

@@ -1,0 +1,17 @@
+.contenedor-header{
+    
+    min-height: 20vh;
+    max-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contenedor-menu{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    background: rgba(10, 14, 15, .5);
+    min-width: 70%;
+    border-radius: 1000px;
+    padding: 1vw;
+}

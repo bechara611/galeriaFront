@@ -3,7 +3,6 @@ import {NavLink,useNavigate } from 'react-router-dom'
 import Alerta from '../elementos/Alertas';
 import HeaderPrincial from './Header';
 import './GalleryMain.css'
-import Album from '../elementos/Album';
 
 const Gallery = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTipoMensaje}) => {
     let navegar = useNavigate();
@@ -37,8 +36,7 @@ const Gallery = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTipoMensaj
         <br></br>
         <br></br>
        
-        <Album></Album>
-      
+        <NavLink to="/">Login</NavLink>
         
         
         

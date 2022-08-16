@@ -1,0 +1,25 @@
+*{
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.contenedor-header{
+ 
+
+
+    min-height: 20vh;
+    max-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contenedor-menu{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    background: rgb(244, 250, 252,.7);
+    min-width: 70%;
+    border-radius: 1000px;
+    padding: 1vw;
+}
