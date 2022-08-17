@@ -1,6 +1,6 @@
 *{
     /* font-family: 'Courier New', Courier, monospace; */
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -45,7 +45,7 @@
 
 /* RESPONSIVE  */
 
-@media(max-width:295px){
+@media(max-width:350px){
     .contenedor-header{
         max-height: 16vh;
         

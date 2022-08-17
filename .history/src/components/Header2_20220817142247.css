@@ -1,6 +1,6 @@
 *{
     /* font-family: 'Courier New', Courier, monospace; */
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 
@@ -17,15 +17,13 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    
 }
-
 .contenedor-menu{
     display: flex;
     align-self: center;
     justify-content: flex-end;
     
-   
+    min-width: 40%;
     border-radius: 1000px;
     padding: 4px;
    
@@ -37,68 +35,44 @@
     display: flex;
     align-self: center;
     justify-content: flex-end;
+    
+    padding: 4px;
+   
+   
     transition: 1s all ease;
     
 }
 
 
 
-/* RESPONSIVE  */
-
-@media(max-width:295px){
-    .contenedor-header{
-        max-height: 16vh;
-        
-    }
-    .contenedor2{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-self: center;
-    }
-    .contenedor-menu{
-        align-self: center;
-        justify-content: center;
-    }
-    .contenedor-titulo{
-        align-self: center;
-        justify-content: center;
-    }
-
-}
 
 
 
 /* iconos */
 .cajaIcono{
-    padding-left: 10px;
-    padding-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     cursor: pointer;
-   
 }
 
 .textoIcono{
     padding-bottom: 10px;
-    margin-top: -1%;
+    margin-top: -15%;
     color: rgb(126, 126, 126);
     font-size: 14px;
-    align-self: center;
 }
-.icono{
+.icono-Salir{
     font-size: 30px;
     color: black;
     padding: 5px;
     transition: all 1s ease;
 }
 
-.icono:hover{
+.icono-Salir:hover{
 
-    color: rgb(129, 127, 129);
+    color: rgb(54, 53, 54);
 
 }

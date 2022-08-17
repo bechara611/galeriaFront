@@ -1,10 +1,9 @@
 import './Header2.css'
-import {useNavigate } from 'react-router-dom'
 // import your fontawesome library
-
-
+import  library from'./../helpers/fontawesome';
+// import {ReactComponent as Heart} from './../imagenes/Heart.svg'
 const HeaderPrincial2 = () => {
-  let navegar = useNavigate();
+ 
     return (
        
        <header>
@@ -16,20 +15,8 @@ const HeaderPrincial2 = () => {
         </div>
         
         <div className="contenedor-menu">
-        <div className="cajaIcono">
-        <i className="fa-solid icono fa-user-pen"></i>
-        
-        <p className='textoIcono'>User</p>
-        </div>
-       <div className="cajaIcono" onClick={(e)=>{
-        localStorage.removeItem('token');
-        navegar('/')}}>
-       <i className="fa-solid icono fa-arrow-right-from-bracket"></i>
-       <p className='textoIcono'>Logout</p>
-       </div>
-      
-      
-
+       <i className=" link-red fa-brands fa-linkedin iconosRedes "></i>
+       <i className=" link-red fa-brands fa-linkedin iconosRedes "></i>
         </div>
         </div>
         </div>

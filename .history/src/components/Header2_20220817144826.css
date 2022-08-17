@@ -45,7 +45,7 @@
 
 /* RESPONSIVE  */
 
-@media(max-width:295px){
+@media(max-width:290px){
     .contenedor-header{
         max-height: 16vh;
         

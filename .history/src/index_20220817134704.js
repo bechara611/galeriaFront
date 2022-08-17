@@ -8,7 +8,8 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Gallery from './components/GalleryMain';
 import { Helmet } from 'react-helmet';
 import favIcon from './imagenes/gallery.ico'
-
+// import your fontawesome library
+import './../helpers/fontawesome.';
 
 
 const Index = () => {

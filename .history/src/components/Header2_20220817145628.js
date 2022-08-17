@@ -21,9 +21,7 @@ const HeaderPrincial2 = () => {
         
         <p className='textoIcono'>User</p>
         </div>
-       <div className="cajaIcono" onClick={(e)=>{
-        localStorage.removeItem('token');
-        navegar('/')}}>
+       <div className="cajaIcono">
        <i className="fa-solid icono fa-arrow-right-from-bracket"></i>
        <p className='textoIcono'>Logout</p>
        </div>
