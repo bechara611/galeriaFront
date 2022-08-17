@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import {NavLink,useNavigate } from 'react-router-dom'
 import Alerta from '../elementos/Alertas';
-import HeaderPrincial from './Header';
+import HeaderPrincial2 from './Header2';
 
 import './GalleryMain.css'
 import Album from '../elementos/Album';
@@ -35,7 +35,7 @@ const Gallery = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTipoMensaj
             :
             <></>}
             <div className="main">
-        <HeaderPrincial></HeaderPrincial>
+        <HeaderPrincial2></HeaderPrincial2>
         <br></br>
         <br></br>
        

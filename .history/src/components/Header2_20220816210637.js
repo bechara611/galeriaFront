@@ -1,7 +1,8 @@
 import './Header.css'
 import {ReactComponent as Heart} from './../imagenes/Heart.svg'
-const HeaderPrincial = () => {
- 
+const HeaderPrincial2 = () => {
+  let linkdn="https://linkedin.com/in/DanyBechara";
+  let blank='_blank'
     return (
        
        <header>
@@ -20,4 +21,4 @@ const HeaderPrincial = () => {
       );
 }
  
-export default HeaderPrincial;
+export default HeaderPrincial2;

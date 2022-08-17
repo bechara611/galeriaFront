@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import {NavLink,useNavigate } from 'react-router-dom'
 import Alerta from '../elementos/Alertas';
-import HeaderPrincial from './Header';
+import HeaderPrincial from './Header2';
 
 import './GalleryMain.css'
 import Album from '../elementos/Album';

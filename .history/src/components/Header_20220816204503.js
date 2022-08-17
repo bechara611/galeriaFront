@@ -1,17 +1,16 @@
 import './Header.css'
-import {ReactComponent as Heart} from './../imagenes/Heart.svg'
+import Heart from './../imagenes/Heart.svg'
 const HeaderPrincial = () => {
- 
+  let linkdn="https://linkedin.com/in/DanyBechara";
+  let blank='_blank'
     return (
        
        <header>
         <div className="container-fluid contenedor-header ">
         <div className="contenedor-menu">
-       <Heart className='heart'></Heart>
-      
-       <i className=" link-red fa-brands fa-linkedin iconosRedes "></i>
-      
-       <Heart></Heart>
+        <a className='link-red linkdin'target={blank} href={linkdn}><i className="fa-brands fa-linkedin iconosRedes "></i></a>
+       <p>Menu 1</p>
+       <p>Menu 1</p>
         </div>
         
         </div>

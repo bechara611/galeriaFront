@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import {NavLink,useNavigate } from 'react-router-dom'
 import Alerta from '../elementos/Alertas';
-import HeaderPrincial from './Header';
+import HeaderPrincial2 from './Header2';
 
 import './GalleryMain.css'
 import Album from '../elementos/Album';
-
+import Header3 from './Header3';
 
 const Gallery = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTipoMensaje}) => {
     let navegar = useNavigate();
@@ -35,7 +35,7 @@ const Gallery = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTipoMensaj
             :
             <></>}
             <div className="main">
-        <HeaderPrincial></HeaderPrincial>
+        <Header3></Header3>
         <br></br>
         <br></br>
        

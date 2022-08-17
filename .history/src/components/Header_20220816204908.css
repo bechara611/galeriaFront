@@ -18,14 +18,14 @@
     display: flex;
     align-self: center;
     justify-content: space-between;
-    background: rgb(244, 250, 252,.9);
-    min-width: 40%;
+    background: rgb(244, 250, 252,1);
+    min-width: 70%;
     border-radius: 1000px;
-    padding: 4px;
-    border-bottom: 5px solid rgba(221, 149, 243, 0.5);
-   
+    padding: 1vw;
+    border-bottom: 5px solid rgb(46, 170, 164,.7);
+    border-top: 2px solid rgb(46, 170, 164,.7);
     transition: 1s all ease;
-    
+ 
 }
 .contenedor-menu:hover{
     border-bottom: 5px solid rgb(46, 170, 164,1);
@@ -42,12 +42,5 @@
 color:white;
 fill:red;
 
-}
-.link-red{
-  
-    color: rgb(223, 181, 181);
-    font-size: 35px;
-   
-    display: inline-block;
-   
+
 }

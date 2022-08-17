@@ -25,7 +25,7 @@
     border-bottom: 5px solid rgba(221, 149, 243, 0.5);
    
     transition: 1s all ease;
-    
+    box-shadow: 20px 20px 20px 10px rgba(221, 149, 243, 0.2);
 }
 .contenedor-menu:hover{
     border-bottom: 5px solid rgb(46, 170, 164,1);
