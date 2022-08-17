@@ -7,7 +7,7 @@
 .contenedor-header{
  
 
-
+    background: black;
     min-height: 15vh;
     max-height: 15vh;
     display: flex;

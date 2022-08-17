@@ -1,7 +1,7 @@
 .seccion-subir-fotos{
     
     max-width: 100vw;
-    min-height: 15vh;
+    min-height: 20vh;
    
     display: flex;
     flex-direction: row;

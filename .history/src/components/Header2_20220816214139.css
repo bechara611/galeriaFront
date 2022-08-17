@@ -6,8 +6,8 @@
 
 .contenedor-header{
  
-
-
+    background: linear-gradient(to bottom, rgba(135, 191, 243, 0.2) 0%, rgba(193, 149, 243, 0.5) 100%);
+   border-bottom: 1px solid rgba(200, 199, 201, 0.5);
     min-height: 15vh;
     max-height: 15vh;
     display: flex;

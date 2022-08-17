@@ -1,4 +1,4 @@
-import './Header.css'
+import './Header2.css'
 // import {ReactComponent as Heart} from './../imagenes/Heart.svg'
 const HeaderPrincial = () => {
  
@@ -20,4 +20,4 @@ const HeaderPrincial = () => {
       );
 }
  
-export default HeaderPrincial;
+export default HeaderPrincial2;

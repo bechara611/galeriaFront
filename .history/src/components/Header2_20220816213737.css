@@ -7,7 +7,7 @@
 .contenedor-header{
  
 
-
+   border-bottom: 1px solid rgb(216, 138, 247,.5);
     min-height: 15vh;
     max-height: 15vh;
     display: flex;
