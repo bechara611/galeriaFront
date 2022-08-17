@@ -23,7 +23,7 @@
     background: rgba(255, 255, 255,.9);
     min-height: 50vh;
     max-height: 50vh;
-   
+   min-width: 100%;
     border: rgb(211, 210, 210,.5) solid 2px;
     margin: 10px;
     padding: 3px;

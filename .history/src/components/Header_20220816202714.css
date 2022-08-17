@@ -18,15 +18,9 @@
     display: flex;
     align-self: center;
     justify-content: space-between;
-    background: rgb(244, 250, 252,1);
-    min-width: 100%;
+    background: rgb(244, 250, 252,.7);
+    min-width: 70%;
     border-radius: 1000px;
     padding: 1vw;
-    border-bottom: 5px solid rgb(46, 170, 164,.7);
-    border-top: 2px solid rgb(46, 170, 164,.7);
-    transition: 1s all ease;
- 
-}
-.contenedor-menu:hover{
-    border-bottom: 5px solid rgb(46, 170, 164,1);
+    position: fixed;
 }
