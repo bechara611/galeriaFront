@@ -104,10 +104,10 @@
     font-size: 30px;
     color: rgb(37, 37, 37,1);
     padding: 5px;
-    transition: all .5s linear;
+    transition: all 1s ease;
 }
 
-.icono:hover {
+.icono:hover .textoIcono:hover{
 
     color: rgb(134, 41, 134);
 

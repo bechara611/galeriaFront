@@ -1,0 +1,223 @@
+
+
+.contenedor-header{
+ 
+    background: linear-gradient(to bottom, rgb(251, 255, 255) 0%, rgb(253, 251, 255) 100%);
+   border-bottom: 5px solid rgb(200, 199, 201,.5);
+    min-height: 8vh;
+    max-height: 10vh;
+
+}
+.contenedor2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.contenedor-menu{
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    
+   
+    border-radius: 1000px;
+    padding: 4px;
+   
+   
+    transition: 1s all ease;
+    
+}
+.contenedor-titulo{
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    transition: 1s all ease;
+   
+    
+}
+
+.titulo{
+   text-decoration: none;
+   font-size: 30px;
+  
+}
+
+
+
+/* RESPONSIVE  */
+
+@media(max-width:295px){
+    .contenedor-header{
+        max-height: 16vh;
+        
+    }
+    .contenedor2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-self: center;
+    }
+    .contenedor-menu{
+        align-self: center;
+        justify-content: center;
+    }
+    .contenedor-titulo{
+        align-self: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+/* iconos */
+.cajaIcono{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+.textoIcono{
+    padding-bottom: 10px;
+    margin-top: -1%;
+    color: rgb(126, 126, 126);
+    font-size: 14px;
+    align-self: center;
+}
+.icono{
+    font-size: 30px;
+    color: rgb(37, 37, 37,1);
+    padding: 5px;
+    transition: all 1s ease;
+}
+
+.icono:hover{
+
+    color: rgb(129, 127, 129);
+
+}
+
+
+
+
+/* BORRAR */
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+
+
+.container22{
+	width:320px;
+	height:320px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%)
+	}
+
+h1{
+	background:#fff;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	display:flex;
+	font-family:'Titan One',cursive;
+	font-size:90px;
+	font-weight:700;
+	flex-flow:row wrap;
+	align-content:center;
+	justify-content:center
+	}
+
+h1 span{width:100%;position:relative}
+
+h1 span:before{
+	background:linear-gradient(45deg,#fc5c7d,#6a82fb,#fc5c7d);
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	content:"";
+	mix-blend-mode:screen
+	}
+
+[class*="blobs"]
+	{mix-blend-mode:color;animation:blobs 15s ease-in-out infinite alternate}
+
+.blobs_1{
+	background:#ff1493;
+	width:60px;
+	height:60px;
+	top:90px;
+	left:210px
+	}
+
+.blobs_2{
+	background:#ff4500;
+	width:80px;
+	height:80px;
+	top:155px;
+	left:230px
+	}
+
+.blobs_3{
+	background:#00ff00;
+	width:60px;
+	height:60px;
+	top:145px;
+	left:20px
+	}
+
+.blobs_4{
+	background:#ff0000;
+	width:100px;
+	height:100px;
+	top:115px;
+	left:100px
+	}
+
+.blobs_5{
+	background:#ffff00;
+	width:50px;
+	height:50px;
+	top:55px;
+	left:70px
+	}
+
+.blobs_6{
+	background:#00ffff;
+	width:60px;
+	height:60px;
+	top:220px;
+	left:55px
+	}
+
+.blobs_7{
+	background:#ff8c00;
+	width:50px;
+	height:50px;
+	top:210px;
+	left:180px
+	}
+
+@keyframes blobs{
+	0%{border-radius:26% 74% 61% 39% / 54% 67% 33% 46%}
+	10%{border-radius:74% 26% 47% 53% / 68% 46% 54% 32%}
+	20%{border-radius:48% 52% 30% 70% / 27% 37% 63% 73%}
+	30%{border-radius:73% 27% 57% 43% / 28% 67% 33% 72%}
+	40%{border-radius:63% 37% 56% 44% / 25% 28% 72% 75%}
+	50%{border-radius:39% 61% 70% 30% / 61% 29% 71% 39%}
+	60%{border-radius:27% 73% 29% 71% / 73% 51% 49% 27%}
+	70%{border-radius:39% 61% 65% 35% / 74% 65% 35% 26%}
+	80%{border-radius:55% 45% 37% 63% / 38% 30% 70% 62%}
+	90%{border-radius:25% 75% 70% 30% / 39% 50% 50% 61%}
+	100%{border-radius:66% 34% 33% 67% / 65% 73% 27% 35%}
+	}

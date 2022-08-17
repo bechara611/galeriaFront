@@ -12,10 +12,7 @@ const HeaderPrincial2 = () => {
         <div className="contenedor2 container">
         <div className="contenedor-titulo">
         
-       
-        <div className="wrapper">
-	<p className='h1'>Gallery App</p>
-</div>
+        <div className='Roses'>Roses</div>
         </div>
         
         <div className="contenedor-menu">

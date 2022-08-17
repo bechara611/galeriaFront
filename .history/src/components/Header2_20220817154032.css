@@ -47,17 +47,10 @@
 
 
 /* RESPONSIVE  */
-@media(max-width:216px){
-    .contenedor-header{
-        max-height: 23vh;
-        min-height: 23vh;
-        
-    }
-}
 
-@media(max-width:362px){
+@media(max-width:295px){
     .contenedor-header{
-        max-height: 19vh;
+        max-height: 16vh;
         
     }
     .contenedor2{
@@ -104,29 +97,22 @@
     font-size: 30px;
     color: rgb(37, 37, 37,1);
     padding: 5px;
-    transition: all .5s linear;
+    transition: all 1s ease;
 }
 
-.icono:hover {
+.icono:hover{
 
-    color: rgb(134, 41, 134);
-
- 
+    color: rgb(129, 127, 129);
 
 }
 
 
 
 
-
-/* titulo */
+/* BORRAR */
 
 .wrapper {
 	text-align: center;
-}
-.h1::first-letter{
-    font-size: 40px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 	.h1{
 		color: #fff;
@@ -134,14 +120,13 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		font-family: "Josefin Sans", sans-serif;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 		background: linear-gradient(to right, #b874e6 10%, #7d58c2 50%, #cf5880 60%);
 		background-size: auto auto;
 		background-clip: border-box;
 		background-size: 200% auto;
 		color: #fff;
 		background-clip: text;
-	
+		text-fill-color: transparent;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		animation: textclip 1.5s linear infinite;

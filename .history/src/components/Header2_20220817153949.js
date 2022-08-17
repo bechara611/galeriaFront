@@ -13,7 +13,7 @@ const HeaderPrincial2 = () => {
         <div className="contenedor-titulo">
         
        
-        <div className="wrapper">
+        <div class="wrapper">
 	<p className='h1'>Gallery App</p>
 </div>
         </div>

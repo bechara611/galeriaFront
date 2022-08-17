@@ -13,8 +13,8 @@ const HeaderPrincial2 = () => {
         <div className="contenedor-titulo">
         
        
-        <div className="wrapper">
-	<p className='h1'>Gallery App</p>
+        <div class="wrapper">
+	<h1 className='h1'>@web3senior</h1>
 </div>
         </div>
         

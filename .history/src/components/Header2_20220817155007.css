@@ -47,17 +47,16 @@
 
 
 /* RESPONSIVE  */
-@media(max-width:216px){
+@media(max-width:250px){
     .contenedor-header{
-        max-height: 23vh;
-        min-height: 23vh;
+        max-height: 24vh;
         
     }
 }
 
 @media(max-width:362px){
     .contenedor-header{
-        max-height: 19vh;
+        max-height: 20vh;
         
     }
     .contenedor2{
@@ -104,17 +103,14 @@
     font-size: 30px;
     color: rgb(37, 37, 37,1);
     padding: 5px;
-    transition: all .5s linear;
+    transition: all 1s ease;
 }
 
-.icono:hover {
+.icono:hover{
 
-    color: rgb(134, 41, 134);
-
- 
+    color: rgb(129, 127, 129);
 
 }
-
 
 
 
