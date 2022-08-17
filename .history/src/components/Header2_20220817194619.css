@@ -2,8 +2,8 @@
 
 .contenedor-header{
  
-    background: linear-gradient(to bottom, rgb(251, 255, 255) 0%, rgb(252, 249, 255) 100%);
-   border-bottom: 5px solid rgba(133, 44, 221, 0.2);
+    background: linear-gradient(to bottom, rgb(251, 255, 255) 0%, rgb(253, 251, 255) 100%);
+   border-bottom: 5px solid rgb(200, 199, 201,.5);
     min-height: 8vh;
     max-height: 12vh;
 
@@ -47,17 +47,17 @@
 
 
 /* RESPONSIVE  */
-@media(max-width:232px){
+@media(max-width:216px){
     .contenedor-header{
-        max-height: 26vh;
-        min-height: 26vh;
+        max-height: 25vh;
+        min-height: 25vh;
         
     }
 }
 
 @media(max-width:362px){
     .contenedor-header{
-        max-height: 22vh;
+        max-height: 19vh;
         
     }
     .contenedor2{

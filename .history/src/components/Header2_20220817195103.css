@@ -2,8 +2,8 @@
 
 .contenedor-header{
  
-    background: linear-gradient(to bottom, rgb(251, 255, 255) 0%, rgb(252, 249, 255) 100%);
-   border-bottom: 5px solid rgba(133, 44, 221, 0.2);
+    background: linear-gradient(to bottom, rgb(251, 255, 255) 0%, rgb(194, 149, 240) 100%);
+   border-bottom: 5px solid rgb(200, 199, 201,.5);
     min-height: 8vh;
     max-height: 12vh;
 
