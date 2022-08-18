@@ -1,0 +1,54 @@
+// import Boton from './../elementos/button'
+import './Album.css'
+import Label from './Label';
+const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMensaje }) => {
+  return (
+    <>
+      <div className="seccion-subir-fotos">
+        <div className="row contenedor-subir-fotos">
+          <div className=" col-12 contenedor-titulo-subir">
+            <p className='titulo-subir'>UPLOAD YOUR IMAGES</p>
+          </div>
+          <div className="col-12 contenedor-form-subir">
+
+            <Label fondoVerde htmlFor="upload" className='btn boton-imagenes'>SELECT IMAGES</Label>
+            <input id="upload" multiple type="file" name="imagenes" className='ocultar' onChange={(e)=>{
+              if(e.target.value.length>0){
+                console.log(e.target.value)
+              }else{
+                return
+              }
+            }}></input>
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+     <div className="row">
+      <div className="contenedor-fotos">
+        <h1> </h1>
+      </div>
+      </div>
+
+    </>
+  );
+}
+
+export default Album;

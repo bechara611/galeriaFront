@@ -1,0 +1,155 @@
+
+
+.contenedor-header{
+ 
+    background: linear-gradient(to bottom, rgb(251, 255, 255) 0%, rgb(252, 249, 255) 100%);
+   border-bottom: 5px solid rgba(133, 44, 221, 0.2);
+    min-height: 8vh;
+    max-height: 12vh;
+
+}
+.contenedor2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.contenedor-menu{
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    
+   
+    border-radius: 1000px;
+    padding: 4px;
+   
+   
+    transition: 1s all ease;
+    
+}
+.contenedor-titulo{
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    transition: 1s all ease;
+    margin-bottom: 20px;
+    
+}
+
+.titulo{
+   text-decoration: none;
+   font-size: 30px;
+  
+}
+
+
+
+/* RESPONSIVE  */
+@media(max-width:232px){
+    .contenedor-header{
+        max-height: 26vh;
+        min-height: 26vh;
+        
+    }
+}
+
+@media(max-width:362px){
+    .contenedor-header{
+        max-height: 22vh;
+        
+    }
+    .contenedor2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-self: center;
+    }
+    .contenedor-menu{
+        align-self: center;
+        justify-content: center;
+    }
+    .contenedor-titulo{
+        align-self: center;
+        justify-content: center;
+        margin-bottom: 0px
+    }
+
+}
+
+
+
+/* iconos */
+.cajaIcono{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+.textoIcono{
+    padding-bottom: 10px;
+    margin-top: -1%;
+    color: rgb(126, 126, 126);
+    font-size: 14px;
+    align-self: center;
+}
+.icono{
+    font-size: 30px;
+    color: rgb(37, 37, 37,1);
+    padding: 5px;
+    transition: all .5s linear;
+}
+
+.icono:hover {
+
+    color: rgb(134, 41, 134);
+
+ 
+
+}
+
+
+
+
+
+/* titulo */
+
+.wrapper {
+	text-align: center;
+}
+.h1::first-letter{
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+	.h1{
+		color: #fff;
+		font-size: 25px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: "Josefin Sans", sans-serif;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		background: linear-gradient(to right, #b874e6 10%, #7d58c2 50%, #cf5880 60%);
+		background-size: auto auto;
+		background-clip: border-box;
+		background-size: 200% auto;
+		color: #fff;
+		background-clip: text;
+	
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: textclip 2s linear infinite;
+		display: inline-block;
+	}
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
