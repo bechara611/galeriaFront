@@ -12,15 +12,15 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
   const funcion = async function(){
         // eslint-disable-next-line
     const respuesta = await postInsertarImagenes(localStorage.getItem('token'),formdataUse)
-      .then(respuesta=>{
+      .then(respuesta=>{console.log(respuesta);
        
         cambiarEstadoAlerta(true);
         cambiarTipoMensaje({tipo:"exito",mensaje:"COMPLETE"})
         return respuesta})
       .catch(error=>{
-       
+        console.log(error); 
         cambiarEstadoAlerta(true);
-        cambiarTipoMensaje({tipo:"error",mensaje:error.response.data.errors.msg})
+        cambiarTipoMensaje({tipo:"error",mensaje:"ERROR"})
         
         return error})
   }
@@ -41,7 +41,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
           <div className="col-12 contenedor-form-subir">
 
             <Label fondoVerde htmlFor="upload" className='btn boton-imagenes'><span className='texto-boton'>SELECT IMAGES</span></Label>
-            <input id="upload" multiple type="file" accept="image/.jpeg,.jpg,.png,.gif,.ico" name="imagenes" className='ocultar' onChange={(e)=>{
+            <input id="upload" multiple type="file" accept="image/'jpeg','jpg','png','gif','ico'" name="imagenes" className='ocultar' onChange={(e)=>{
               if(e.target.value.length>0){
               
                 const formData = new  FormData();

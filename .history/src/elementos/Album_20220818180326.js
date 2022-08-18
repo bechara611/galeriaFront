@@ -18,9 +18,9 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
         cambiarTipoMensaje({tipo:"exito",mensaje:"COMPLETE"})
         return respuesta})
       .catch(error=>{
-       
+        console.log(error); 
         cambiarEstadoAlerta(true);
-        cambiarTipoMensaje({tipo:"error",mensaje:error.response.data.errors.msg})
+        cambiarTipoMensaje({tipo:"error",mensaje:"ERROR"})
         
         return error})
   }
