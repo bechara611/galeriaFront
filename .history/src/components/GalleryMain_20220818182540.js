@@ -35,7 +35,6 @@ const Gallery = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTipoMensaj
             ></Alerta></>
             :
             <></>}
-            
             <div className="main">
         <HeaderPrincial2></HeaderPrincial2>
         <br></br>

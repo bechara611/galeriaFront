@@ -45,10 +45,6 @@ const Index = () => {
                   cambiarEstadoAlerta={cambiarEstadoAlerta}
                   tipoMensaje={tipoMensaje}
                   cambiarTipoMensaje={cambiarTipoMensaje}
-                  estadoCompleto={estadoCompleto}
-                  cambiarestadoCompleto={cambiarestadoCompleto}
-                  estadoLoading={estadoLoading}
-                  cambiarestadoLoading={cambiarestadoLoading}
                   ></Gallery>}></Route>
             </Routes>
          </BrowserRouter>
