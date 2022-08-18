@@ -13,7 +13,7 @@ const Album = () => {
 
 
         <div className=" contenedor-fotos">
-        <h1> </h1>
+        <h1></h1>
         </div>
       
         </>
