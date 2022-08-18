@@ -11,7 +11,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
           </div>
           <div className="col-12 contenedor-form-subir">
 
-            <Label fondoVerde htmlFor="upload" className='btn boton-imagenes'><span className='texto-boton'>SELECT IMAGES</span></Label>
+            <Label fondoVerde htmlFor="upload" className='btn boton-imagenes'><p>SELECT IMAGES</p></Label>
             <input id="upload" multiple type="file" name="imagenes" className='ocultar' onChange={(e)=>{
               if(e.target.value.length>0){
                 console.log(e.target.value)

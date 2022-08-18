@@ -41,11 +41,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
 
 
 
-    <div className="contenedor-fotos-padre">
-      <div className="contenedor-fotos">
-     
-      </div>
-      </div>
 
     </>
   );
