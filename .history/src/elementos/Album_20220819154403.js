@@ -118,7 +118,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
       </>}
     
       </div>
-      
       </div>
       <FooterComponente></FooterComponente>
     </>

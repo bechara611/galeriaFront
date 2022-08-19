@@ -1,0 +1,12 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+.contenedor-footer{
+    align-self: center;
+    justify-content: center;
+    width: 50%;
+}
