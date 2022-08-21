@@ -126,25 +126,12 @@ const postInsertarImagenes=async(token,formdata)=>{
 }
 
 const GetObtenerImagenes = async ()=>{
-    return new Promise(async(resolve,reject)=>{
-        try {
-            if(!localStorage.getItem('uid')){
-                reject(null);
-                return;
-            }
-            const respuesta= await axios.get(process.env.REACT_APP_BACK+'api/imagenes/',
-            {
-                idUsuario:localStorage.getItem('uid')
-            })
-            if(respuesta){
-                resolve(respuesta)
-            }else{
-                reject(null)
-            }
-        } catch (error) {
-            reject(error);
+    return new Promise((resolve,reject)=>{
+        if(!localStorage.getItem('uid')){
+            reject(null);
+            return;
         }
-       
+        const respuesta= await axios.get(process.env.REACT_APP_BACK+'api/imagenes/')
     })
 }
-export {GetHacerLogin,getHacerLogin2,postRegistrarUsuario,getRecoveryPassword,postInsertarImagenes,GetObtenerImagenes}
+export {GetHacerLogin,getHacerLogin2,postRegistrarUsuario,getRecoveryPassword,postInsertarImagenes}

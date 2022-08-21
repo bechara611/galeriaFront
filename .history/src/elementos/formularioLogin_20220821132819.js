@@ -22,9 +22,9 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          if(data.data.Token){
             localStorage.removeItem('token');
             localStorage.setItem('token',data.data.Token)
-            localStorage.setiTEM('uid',data.data.idGlobal)
+       
          }
-        
+         console.log(data)
          navegar('/Gallery');
          return data.data
         
