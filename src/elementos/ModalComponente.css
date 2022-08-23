@@ -1,0 +1,15 @@
+.imagenModal{
+ width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.centrarModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    z-index: 10000000000000;
+}
