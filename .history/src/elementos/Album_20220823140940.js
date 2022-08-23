@@ -31,7 +31,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
          cambiarTipoMensaje({tipo:"exito",mensaje:"COMPLETE"})
         subirImagenes(false)
         cambiarestadoLoading(false)
-        cambiarBuscarImagenes(true)
+        
     
         return respuesta})
       .catch(error=>{
@@ -122,6 +122,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
                 }
                 cambiarformdataUse(formData);
                 subirImagenes(true)
+                cambiarvectorFotos(null)
                 cambiarBuscarImagenes(false);
                 cambiarBuscarImagenes(true);
               }else{

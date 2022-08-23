@@ -1,0 +1,17 @@
+.contenedor-imagenes{
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imagen{
+    display: flex;
+    width: 100px;
+    height: 100px;  
+}
+
+
+  
+  

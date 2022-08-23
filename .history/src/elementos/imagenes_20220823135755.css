@@ -1,0 +1,38 @@
+.imagen{
+    width: 100px;
+    height: 100px;
+   
+   
+    
+}
+
+.contenedor-imagenes:before {
+    background: red;
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;left:0;right:0;
+    background-color:rgba(0,0,0,0);
+  }
+
+
+
+
+  .contenedor-imagenes:hover::before {
+    background-color:rgba(0,0,0,0.5);
+  }
+  .contenedor-imagenes img {
+    display:block;
+  }
+  .contenedor-imagenes button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity:0;
+  } 
+  .contenedor-imagenes:hover button {   
+    opacity: 1;
+  }
