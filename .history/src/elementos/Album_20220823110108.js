@@ -13,9 +13,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
  // eslint-disable-next-line
  const [contenedor,cambiarContenedor]=useState(null)
  // eslint-disable-next-line
- const [vectorFotos,cambiarvectorFotos]=useState(null)
- const [buscarImagenes,cambiarBuscarImagenes]=useState(true)
- 
+ const [vectorFotos,cambiarvectorFotos]=useState(false)
  useEffect(() => {
  
   async function funcion(){
@@ -30,8 +28,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
          cambiarTipoMensaje({tipo:"exito",mensaje:"COMPLETE"})
         subirImagenes(false)
         cambiarestadoLoading(false)
-        
-    
+        cambiarvectorFotos(true)
         return respuesta})
       .catch(error=>{
         cambiarestadoLoading(false)
@@ -42,8 +39,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
   }
   if (imagenes===true) {
     funcion()
-    
-    cambiarBuscarImagenes(true)
     subirImagenes(false)
   }
        // eslint-disable-next-line
@@ -63,28 +58,20 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
         }
        
       })
-      if(!respuesta.data.errors){
-        console.log(respuesta.data.usuarioEimagenes[0].img)
-        let imagenes=[];
-        for(let i=0; i< respuesta.data.usuarioEimagenes.length;i++ ){
-          imagenes.push(respuesta.data.usuarioEimagenes[i])
-        }
-        cambiarvectorFotos(imagenes)
+      if(respuesta.data.errors){
+        cambiarvectorFotos(null)
         return
       }else{
-        cambiarvectorFotos(null)
+        console.log(respuesta.data.usuarioEimagenes[0].img)
+        cambiarvectorFotos(true)
         return
       }
      
      
   }
-  if(buscarImagenes===true){
-    Metodo();
-    cambiarBuscarImagenes(false)
-  }
-
+  Metodo();
    // eslint-disable-next-line
- },[buscarImagenes])
+ },[vectorFotos])
   return (
     <>
     {estadoLoading 

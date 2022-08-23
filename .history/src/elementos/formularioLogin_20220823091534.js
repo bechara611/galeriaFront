@@ -22,7 +22,6 @@ const FormularioLogin =({register,cambiarRegister,cambiarEstadoAlerta,cambiarTip
          if(data.data.Token){
             localStorage.removeItem('token');
             localStorage.setItem('token',data.data.Token)
-            localStorage.removeItem('uid');
             localStorage.setItem('uid',data.data.idGlobal)
          }
         

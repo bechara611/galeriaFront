@@ -13,9 +13,8 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
  // eslint-disable-next-line
  const [contenedor,cambiarContenedor]=useState(null)
  // eslint-disable-next-line
- const [vectorFotos,cambiarvectorFotos]=useState(null)
- const [buscarImagenes,cambiarBuscarImagenes]=useState(true)
- 
+ const [vectorFotos,cambiarvectorFotos]=useState(false)
+ const [mostrarFotos,cambiarMostrarFotos]=useState(false)
  useEffect(() => {
  
   async function funcion(){
@@ -30,8 +29,8 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
          cambiarTipoMensaje({tipo:"exito",mensaje:"COMPLETE"})
         subirImagenes(false)
         cambiarestadoLoading(false)
-        
-    
+        cambiarMostrarFotos(true)
+        cambiarvectorFotos(vectorFotos)
         return respuesta})
       .catch(error=>{
         cambiarestadoLoading(false)
@@ -42,8 +41,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
   }
   if (imagenes===true) {
     funcion()
-    
-    cambiarBuscarImagenes(true)
     subirImagenes(false)
   }
        // eslint-disable-next-line
@@ -65,26 +62,18 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
       })
       if(!respuesta.data.errors){
         console.log(respuesta.data.usuarioEimagenes[0].img)
-        let imagenes=[];
-        for(let i=0; i< respuesta.data.usuarioEimagenes.length;i++ ){
-          imagenes.push(respuesta.data.usuarioEimagenes[i])
-        }
-        cambiarvectorFotos(imagenes)
+        cambiarMostrarFotos(true)
         return
       }else{
-        cambiarvectorFotos(null)
+        cambiarMostrarFotos(null)
         return
       }
      
      
   }
-  if(buscarImagenes===true){
-    Metodo();
-    cambiarBuscarImagenes(false)
-  }
-
+  Metodo();
    // eslint-disable-next-line
- },[buscarImagenes])
+ },[vectorFotos,cambiarvectorFotos])
   return (
     <>
     {estadoLoading 
@@ -149,7 +138,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
 
     <div className="contenedor-fotos-padre">
       <div className="contenedor-fotos">
-      {(vectorFotos)
+      {(mostrarFotos)
         ?
          <>
          <p className='NoData'>SI HAY DATA</p>

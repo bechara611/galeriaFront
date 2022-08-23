@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import FooterComponente from '../components/Footer';
-import {  GetObtenerImagenes, postInsertarImagenes } from '../helpers/peticiones';
+import { postInsertarImagenes } from '../helpers/peticiones';
 import './Album.css'
 import Label from './Label';
 import Loading from './loading';
@@ -14,8 +14,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
  const [contenedor,cambiarContenedor]=useState(null)
  // eslint-disable-next-line
  const [vectorFotos,cambiarvectorFotos]=useState(null)
- const [buscarImagenes,cambiarBuscarImagenes]=useState(true)
- 
  useEffect(() => {
  
   async function funcion(){
@@ -30,8 +28,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
          cambiarTipoMensaje({tipo:"exito",mensaje:"COMPLETE"})
         subirImagenes(false)
         cambiarestadoLoading(false)
-        
-    
         return respuesta})
       .catch(error=>{
         cambiarestadoLoading(false)
@@ -42,8 +38,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
   }
   if (imagenes===true) {
     funcion()
-    
-    cambiarBuscarImagenes(true)
     subirImagenes(false)
   }
        // eslint-disable-next-line
@@ -51,40 +45,10 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
  
  useEffect(()=>{
   async function Metodo(){
-    const respuesta = await GetObtenerImagenes()
-      .then(respuesta=>{
-        return respuesta;
-      })
-      .catch(error=>{
-        if(error.response.data.errors[0].msg){
-          cambiarEstadoAlerta(true);
-           cambiarTipoMensaje({tipo:'error',mensaje:error.response.data.errors[0].msg})
-           return error;
-        }
-       
-      })
-      if(!respuesta.data.errors){
-        console.log(respuesta.data.usuarioEimagenes[0].img)
-        let imagenes=[];
-        for(let i=0; i< respuesta.data.usuarioEimagenes.length;i++ ){
-          imagenes.push(respuesta.data.usuarioEimagenes[i])
-        }
-        cambiarvectorFotos(imagenes)
-        return
-      }else{
-        cambiarvectorFotos(null)
-        return
-      }
-     
-     
-  }
-  if(buscarImagenes===true){
-    Metodo();
-    cambiarBuscarImagenes(false)
-  }
 
-   // eslint-disable-next-line
- },[buscarImagenes])
+  }
+  Metodo();
+ },[vectorFotos])
   return (
     <>
     {estadoLoading 
@@ -152,7 +116,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
       {(vectorFotos)
         ?
          <>
-         <p className='NoData'>SI HAY DATA</p>
+         
          </>
       : 
       <>

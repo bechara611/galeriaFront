@@ -65,11 +65,12 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
       })
       if(!respuesta.data.errors){
         console.log(respuesta.data.usuarioEimagenes[0].img)
-        let imagenes=[];
+        let vector=[];
         for(let i=0; i< respuesta.data.usuarioEimagenes.length;i++ ){
-          imagenes.push(respuesta.data.usuarioEimagenes[i])
+          vector.push(respuesta.data.usuarioEimagenes[i])
         }
-        cambiarvectorFotos(imagenes)
+        console.log(vector)
+        cambiarvectorFotos(true)
         return
       }else{
         cambiarvectorFotos(null)

@@ -135,8 +135,8 @@ const GetObtenerImagenes = async ()=>{
             }
            
             // const body={idUsuario2:"62e172febd41dd9336ef15a2"}
-            const body={idUsuario2:localStorage.getItem('uid')}
-           
+            const body={idUsuario2:localStorage.getItem('uid'),}
+            console.log(body)
             const respuesta= await axios.post(process.env.REACT_APP_BACK+'api/imagenes/',body)
             if(respuesta){
                 resolve(respuesta)

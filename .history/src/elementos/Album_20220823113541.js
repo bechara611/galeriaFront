@@ -65,11 +65,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
       })
       if(!respuesta.data.errors){
         console.log(respuesta.data.usuarioEimagenes[0].img)
-        let imagenes=[];
-        for(let i=0; i< respuesta.data.usuarioEimagenes.length;i++ ){
-          imagenes.push(respuesta.data.usuarioEimagenes[i])
-        }
-        cambiarvectorFotos(imagenes)
+        cambiarvectorFotos(true)
         return
       }else{
         cambiarvectorFotos(null)
@@ -149,7 +145,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
 
     <div className="contenedor-fotos-padre">
       <div className="contenedor-fotos">
-      {(vectorFotos)
+      {(vectorFotos===true)
         ?
          <>
          <p className='NoData'>SI HAY DATA</p>
