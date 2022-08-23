@@ -153,9 +153,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
       {(vectorFotos)
         ?
          <>
-        <ComponenteImagenes vectorFotos={vectorFotos}
-        cambiarvectorFotos={cambiarvectorFotos}
-        ></ComponenteImagenes>
+        <ComponenteImagenes></ComponenteImagenes>
          </>
       : 
       <>

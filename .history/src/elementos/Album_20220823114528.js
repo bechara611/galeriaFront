@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import FooterComponente from '../components/Footer';
-import ComponenteImagenes from '../elementos/Imagenes'
 import {  GetObtenerImagenes, postInsertarImagenes } from '../helpers/peticiones';
 import './Album.css'
 import Label from './Label';
@@ -153,9 +152,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
       {(vectorFotos)
         ?
          <>
-        <ComponenteImagenes vectorFotos={vectorFotos}
-        cambiarvectorFotos={cambiarvectorFotos}
-        ></ComponenteImagenes>
+        
          </>
       : 
       <>
