@@ -11,9 +11,9 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
 
  const [imagenes,subirImagenes]=useState(false);
  const [formdataUse,cambiarformdataUse]=useState(null);
-
-
-
+ // eslint-disable-next-line
+ const [contenedor,cambiarContenedor]=useState(null)
+ // eslint-disable-next-line
  const [vectorFotos,cambiarvectorFotos]=useState(null)
  const [buscarImagenes,cambiarBuscarImagenes]=useState(true)
  const [vectorEliminarEstado,cambiarvectorEliminarEstado]=useState([])
@@ -90,32 +90,19 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
 
  useEffect(()=>{
   async function ejecutar(){
-    // eslint-disable-next-line
     const respuesta= await DeleteImagenes(vectorEliminarEstado)
       .then((respuesta)=>{
-        cambiarestadoCompleto(true)
-        cambiarestadoLoading(false)
-        cambiarEstadoAlerta(true);
-        cambiarTipoMensaje({tipo:"exito",mensaje:"DELETED"})
-       cambiarestadoLoading(false)
-       cambiarBuscarImagenes(true)
-       cambiarvectorEliminarEstado([]);
         return respuesta
       })
       .catch((error)=>{
-        cambiarestadoCompleto(true)
-        cambiarestadoLoading(false)
-        cambiarEstadoAlerta(true);
-        cambiarTipoMensaje({tipo:"error",mensaje:error.response.data.errors.msg})
         return error
       })
-     
+      console.log(respuesta)
   } 
   if(ejecutarBorrar===true){
     ejecutar();
     cambiarejecutarBorrar(false)
   }
-  // eslint-disable-next-line
  },[ejecutarBorrar])
   return (
     <>
@@ -167,19 +154,11 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
             <span className='iconoBorrar' onClick={(e)=>{
         
               if(vectorEliminarEstado.length>0){
-                cambiarestadoLoading(true)
                 cambiarejecutarBorrar(true)
               }else{
-                cambiarestadoCompleto(true)
-                cambiarestadoLoading(false)
-                cambiarEstadoAlerta(true);
-                cambiarTipoMensaje({tipo:"error",mensaje:'CHOOSE AT LEAST ONE IMAGE'})
-               
+                console.log('selecciona primero unas imagenes')
               }
-             let elementos = document.getElementsByName('checkeables');
-             elementos.forEach((elemento,index)=>{
-              elemento.checked=false
-             })
+             
             }}><i className="fa-solid fa-trash-can"></i></span>
             </div>
           </div>

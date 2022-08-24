@@ -96,7 +96,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
         cambiarestadoCompleto(true)
         cambiarestadoLoading(false)
         cambiarEstadoAlerta(true);
-        cambiarTipoMensaje({tipo:"exito",mensaje:"DELETED"})
+        cambiarTipoMensaje({tipo:"exito",mensaje:"COMPLETE"})
        cambiarestadoLoading(false)
        cambiarBuscarImagenes(true)
        cambiarvectorEliminarEstado([]);
@@ -174,12 +174,9 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
                 cambiarestadoLoading(false)
                 cambiarEstadoAlerta(true);
                 cambiarTipoMensaje({tipo:"error",mensaje:'CHOOSE AT LEAST ONE IMAGE'})
-               
+                return
               }
-             let elementos = document.getElementsByName('checkeables');
-             elementos.forEach((elemento,index)=>{
-              elemento.checked=false
-             })
+             
             }}><i className="fa-solid fa-trash-can"></i></span>
             </div>
           </div>

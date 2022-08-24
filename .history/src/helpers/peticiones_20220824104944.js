@@ -153,12 +153,11 @@ const GetObtenerImagenes = async ()=>{
 const DeleteImagenes=async(id_imagenes=[''])=>{
 return new Promise(async(resolve,reject)=>{
     try {
-        
         if(id_imagenes.length===0){
             reject(null)
             return;
         }
-        const response = await axios.delete(process.env.REACT_APP_BASEURL+"api/imagenes/",{ data: { id_imagenes: id_imagenes } })
+        const response = await axios.delete(process.env.REACT_APP_BASEURL+"api/imagenes/",{id_imagenes:id_imagenes},{})
         if(response){
             resolve(response)
         }else{

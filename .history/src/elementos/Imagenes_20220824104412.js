@@ -11,7 +11,7 @@ const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEst
             {vectorFotos.map((elemento, index) => {
                 return <React.Fragment key={index}>
                     <label className="checkeable">
-                        <input type="checkbox" name={'checkeables'} id={index} onChange={(e) => {
+                        <input type="checkbox" name={index} id={index} onChange={(e) => {
 
                             if (vectorEliminarEstado.length === 0) {
                                 cambiarvectorEliminarEstado([...vectorEliminarEstado, elemento.img])
