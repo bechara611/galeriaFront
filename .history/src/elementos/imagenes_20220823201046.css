@@ -22,14 +22,16 @@
 /* borrar */
 
 .checkeable input {
-   
+    display: none;
   }
   .checkeable img {
     width: 100px;
     border: 5px solid transparent;
   }
-  
-  .checkeable input:checked  {
+  .checkeable input {
+    display: none;
+  }
+  .checkeable input:checked  + img {
     border-color: blue;
   }
 

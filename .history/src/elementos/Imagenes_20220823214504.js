@@ -4,27 +4,42 @@ import './imagenes.css'
 import Modal from './ModalComponent';
 
 const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEstado,cambiarvectorEliminarEstado}) => {
- 
+    let vectorEliminar=[];
+    let vector2=[];
     return (<>
         <div className='contenedor-imagenes'>
             {vectorFotos.map((elemento, index) => {
                 return <React.Fragment key={index}>
                 <label className="checkeable">
-  <input type="checkbox" name={index} id={index}  onChange={(e)=>{
-
-   if(vectorEliminarEstado.length===0){
-    cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
-    return
-   }
+  <input type="checkbox" name={index+1} id={"check"+(index+1)} onChange={(e)=>{
+    console.log(vectorEliminar.includes(elemento.img))
+    if(e.target.checked===true){
+        vectorEliminar.push(elemento.img)
+        vector2=vectorEliminar;
+    }
+    if(vectorEliminar.includes(elemento.img)){
+        vector2 = vectorEliminar.filter(function(imagen) {
+            return imagen !== elemento.img; 
+        });
+    }else{
+        vectorEliminar.push(elemento.img)
+        vector2=vectorEliminar;
+    }
+    
+    // if(vectorEliminar.length===0){
+    //     vectorEliminar.push(elemento.img)
+    // }
    
-    cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
-if(e.target.checked===false){
-    let vector= vectorEliminarEstado.filter((element,index)=>{
-     return element!==elemento.img
-})
-cambiarvectorEliminarEstado(vector)
-}
+    //  if(e.target.checked===true){
+    //     //TODO VAS A INCORPORAR 
+     
+       
+    //   vectorEliminar.push(elemento.img)
+    
+    // }
+    
    
+    console.log(vector2)
  
  
   }}/>
@@ -32,14 +47,14 @@ cambiarvectorEliminarEstado(vector)
                         data-bs-toggle="modal"
                         data-bs-target={"#Modal-"+index}
                         onClick={(e) => {
-                            let check=document.getElementById(index)
+                            let check=document.getElementById("check"+(index+1))
                             if(check.checked===false){
                                 check.checked=true
                             }else{
                                 check.checked=false
                             }
+                            
                             console.log(elemento)
-                           
                            
                         }}></img>
 </label>

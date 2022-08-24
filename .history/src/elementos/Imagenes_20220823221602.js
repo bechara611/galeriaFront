@@ -4,7 +4,8 @@ import './imagenes.css'
 import Modal from './ModalComponent';
 
 const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEstado,cambiarvectorEliminarEstado}) => {
- 
+    let vectorEliminar=[];
+    let vector2=[];
     return (<>
         <div className='contenedor-imagenes'>
             {vectorFotos.map((elemento, index) => {

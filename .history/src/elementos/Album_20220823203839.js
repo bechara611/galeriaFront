@@ -16,7 +16,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
  // eslint-disable-next-line
  const [vectorFotos,cambiarvectorFotos]=useState(null)
  const [buscarImagenes,cambiarBuscarImagenes]=useState(true)
- const [vectorEliminarEstado,cambiarvectorEliminarEstado]=useState([])
+ 
  useEffect(() => {
  
   async function funcion(){
@@ -135,7 +135,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
             <div className="contenedorIconoBorrar">
             <span className='iconoBorrar' onClick={(e)=>{
               console.log('Borrar');
-              console.log(vectorEliminarEstado)
             }}><i className="fa-solid fa-trash-can"></i></span>
             </div>
           </div>
@@ -159,8 +158,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
          <>
         <ComponenteImagenes vectorFotos={vectorFotos}
         cambiarvectorFotos={cambiarvectorFotos}
-        cambiarvectorEliminarEstado={cambiarvectorEliminarEstado}
-        vectorEliminarEstado={vectorEliminarEstado}
         ></ComponenteImagenes>
          </>
       : 

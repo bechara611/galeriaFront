@@ -28,7 +28,9 @@
     width: 100px;
     border: 5px solid transparent;
   }
+  .checkeable input {
   
+  }
   .checkeable input:checked  {
     border-color: blue;
   }

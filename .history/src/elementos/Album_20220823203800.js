@@ -5,6 +5,7 @@ import FooterComponente from '../components/Footer';
 import ComponenteImagenes from '../elementos/Imagenes'
 import {  GetObtenerImagenes, postInsertarImagenes } from '../helpers/peticiones';
 import './Album.css'
+import ComponenteImagenes2 from './Imagenes';
 import Label from './Label';
 import Loading from './loading';
 const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMensaje,estadoCompleto,cambiarestadoCompleto,estadoLoading,cambiarestadoLoading }) => {
@@ -16,7 +17,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
  // eslint-disable-next-line
  const [vectorFotos,cambiarvectorFotos]=useState(null)
  const [buscarImagenes,cambiarBuscarImagenes]=useState(true)
- const [vectorEliminarEstado,cambiarvectorEliminarEstado]=useState([])
+ 
  useEffect(() => {
  
   async function funcion(){
@@ -135,7 +136,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
             <div className="contenedorIconoBorrar">
             <span className='iconoBorrar' onClick={(e)=>{
               console.log('Borrar');
-              console.log(vectorEliminarEstado)
             }}><i className="fa-solid fa-trash-can"></i></span>
             </div>
           </div>
@@ -157,11 +157,9 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
       {(vectorFotos)
         ?
          <>
-        <ComponenteImagenes vectorFotos={vectorFotos}
+        <ComponenteImagenes2 vectorFotos={vectorFotos}
         cambiarvectorFotos={cambiarvectorFotos}
-        cambiarvectorEliminarEstado={cambiarvectorEliminarEstado}
-        vectorEliminarEstado={vectorEliminarEstado}
-        ></ComponenteImagenes>
+        ></ComponenteImagenes2>
          </>
       : 
       <>

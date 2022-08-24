@@ -135,7 +135,6 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
             <div className="contenedorIconoBorrar">
             <span className='iconoBorrar' onClick={(e)=>{
               console.log('Borrar');
-              console.log(vectorEliminarEstado)
             }}><i className="fa-solid fa-trash-can"></i></span>
             </div>
           </div>

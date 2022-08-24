@@ -4,27 +4,21 @@ import './imagenes.css'
 import Modal from './ModalComponent';
 
 const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEstado,cambiarvectorEliminarEstado}) => {
- 
+    let vectorEliminar=[];
+    let vector2=[];
     return (<>
         <div className='contenedor-imagenes'>
             {vectorFotos.map((elemento, index) => {
                 return <React.Fragment key={index}>
                 <label className="checkeable">
-  <input type="checkbox" name={index} id={index}  onChange={(e)=>{
-
-   if(vectorEliminarEstado.length===0){
-    cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
-    return
+  <input type="checkbox" name={index+1} id={"check"+(index+1)} onChange={(e)=>{
+   if(e.target.checked===true){
+    console.log(true)
+   }else{
+    console.log(false)
    }
    
-    cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
-if(e.target.checked===false){
-    let vector= vectorEliminarEstado.filter((element,index)=>{
-     return element!==elemento.img
-})
-cambiarvectorEliminarEstado(vector)
-}
-   
+    console.log(vector2)
  
  
   }}/>
@@ -32,14 +26,14 @@ cambiarvectorEliminarEstado(vector)
                         data-bs-toggle="modal"
                         data-bs-target={"#Modal-"+index}
                         onClick={(e) => {
-                            let check=document.getElementById(index)
+                            let check=document.getElementById("check"+(index+1))
                             if(check.checked===false){
                                 check.checked=true
                             }else{
                                 check.checked=false
                             }
+                            
                             console.log(elemento)
-                           
                            
                         }}></img>
 </label>
