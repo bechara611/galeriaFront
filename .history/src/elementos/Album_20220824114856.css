@@ -151,9 +151,9 @@
     border: rgba(211, 210, 211, 0.5) solid 2px;
     margin: 10px;
     padding: 3px;
-    padding-right: 0px;
     border-radius: 5px;
     overflow: auto;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
