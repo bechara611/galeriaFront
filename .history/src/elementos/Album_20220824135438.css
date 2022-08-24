@@ -192,10 +192,10 @@
    }
    .iconoBorrar{
     
-   
+   border-bottom: 10px solid black;
     color: rgb(233, 61, 61);
     font-size: 40px;
-    padding-bottom: 5px;
+    
     padding-left: 10px;
     font-size: 50px;
     cursor: pointer;
