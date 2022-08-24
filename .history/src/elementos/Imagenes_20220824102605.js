@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { useState } from 'react';
 
 import './imagenes.css'
 import Modal from './ModalComponent';
 
 const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEstado,cambiarvectorEliminarEstado}) => {
-
+ const [evitar,cambiarEvitar]=useState(false)
     return (<>
         <div className='contenedor-imagenes'>
             {vectorFotos.map((elemento, index) => {
@@ -15,16 +15,10 @@ const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEst
 
    if(vectorEliminarEstado.length===0 ){
     cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
-    if(e.target.checked===false ){
-        let vector= vectorEliminarEstado.filter((element,index)=>{
-         return element!==elemento.img
-    })
-    cambiarvectorEliminarEstado(vector)
-    }
     return
    }
-   if(e.target.checked===true ){cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])}
-    
+   
+    cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
 if(e.target.checked===false ){
     let vector= vectorEliminarEstado.filter((element,index)=>{
      return element!==elemento.img

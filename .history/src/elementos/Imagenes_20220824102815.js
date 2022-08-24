@@ -15,12 +15,6 @@ const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEst
 
    if(vectorEliminarEstado.length===0 ){
     cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
-    if(e.target.checked===false ){
-        let vector= vectorEliminarEstado.filter((element,index)=>{
-         return element!==elemento.img
-    })
-    cambiarvectorEliminarEstado(vector)
-    }
     return
    }
    if(e.target.checked===true ){cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])}

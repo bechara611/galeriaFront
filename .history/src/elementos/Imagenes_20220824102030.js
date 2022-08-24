@@ -1,11 +1,10 @@
 import React from 'react';
 
-
 import './imagenes.css'
 import Modal from './ModalComponent';
 
 const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEstado,cambiarvectorEliminarEstado}) => {
-
+ 
     return (<>
         <div className='contenedor-imagenes'>
             {vectorFotos.map((elemento, index) => {
@@ -13,19 +12,13 @@ const ComponenteImagenes = ({ cambiarvectorFotos, vectorFotos, vectorEliminarEst
                 <label className="checkeable">
   <input type="checkbox" name={index} id={index}  onChange={(e)=>{
 
-   if(vectorEliminarEstado.length===0 ){
+   if(vectorEliminarEstado.length===0){
     cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
-    if(e.target.checked===false ){
-        let vector= vectorEliminarEstado.filter((element,index)=>{
-         return element!==elemento.img
-    })
-    cambiarvectorEliminarEstado(vector)
-    }
     return
    }
-   if(e.target.checked===true ){cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])}
-    
-if(e.target.checked===false ){
+   
+    cambiarvectorEliminarEstado([...vectorEliminarEstado,elemento.img])
+if(e.target.checked===false){
     let vector= vectorEliminarEstado.filter((element,index)=>{
      return element!==elemento.img
 })
@@ -47,7 +40,11 @@ cambiarvectorEliminarEstado(vector)
                                 check.checked=false
                                 
                             }
-                          
+                            let vector= vectorEliminarEstado.filter((element,index)=>{
+                                return element!==elemento.img
+                           })
+                           cambiarvectorEliminarEstado(vector)
+                            console.log(elemento)
                            
                            
                         }}></img>
