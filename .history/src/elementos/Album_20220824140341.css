@@ -189,28 +189,26 @@
    justify-content: flex-end;
    width: 100%;
    position: relative;
-
    }
    .iconoBorrar{
     
    
-    color: rgba(133, 44, 221, .6);
+    color: rgb(233, 61, 61);
     font-size: 40px;
     padding-bottom: 5px;
     padding-left: 10px;
     font-size: 50px;
     cursor: pointer;
-    margin-right: 5px;
    }
 .contenedorIconoBorrar span:hover{
-    color: rgba(133, 44, 221, 1);
+    color: rgb(112, 15, 15);
 
 }
    @media(max-width:678px){
     .contenedorIconoBorrar{
    
         width: 97%;
-       
+        position: absolute;
         }
    }
 
@@ -219,7 +217,7 @@
     .contenedorIconoBorrar{
    
         width: 90%;
-        
+        position: absolute;
         }
         .iconoBorrar{
             align-self: flex-end;
@@ -251,15 +249,11 @@
     justify-content: center;
     align-self: center;
     align-items: center;
-    text-align: center;
     
    }
 
    .centrarNuevo{
-    border-bottom: 4px solid rgb(226, 163, 241,.3);
-    width: 100%;
     justify-content: center;
     align-self: center;
     align-items: center;
-  
    }

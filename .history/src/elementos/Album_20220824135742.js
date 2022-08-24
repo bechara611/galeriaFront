@@ -163,7 +163,25 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
 
 
 
-         
+            <div className="contenedorIconoBorrar">
+            <span className='iconoBorrar' onClick={(e)=>{
+        
+              if(vectorEliminarEstado.length>0){
+                cambiarestadoLoading(true)
+                cambiarejecutarBorrar(true)
+              }else{
+                cambiarestadoCompleto(true)
+                cambiarestadoLoading(false)
+                cambiarEstadoAlerta(true);
+                cambiarTipoMensaje({tipo:"error",mensaje:'CHOOSE AT LEAST ONE IMAGE'})
+               
+              }
+             let elementos = document.getElementsByName('checkeables');
+             elementos.forEach((elemento,index)=>{
+              elemento.checked=false
+             })
+            }}><i className="fa-solid fa-trash-can"></i></span>
+            </div>
           </div>
         
         
@@ -179,29 +197,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
     <div className="contenedor-fotos-padre">
     
       <div className="contenedor-fotos">
-      
-      <div className="contenedorIconoBorrar">
-      <div className="centrarNuevo">
-      <p className='tituloPhotos'>YOUR PHOTOS</p>
-      </div>
-      <span className='iconoBorrar' onClick={(e)=>{
-  
-        if(vectorEliminarEstado.length>0){
-          cambiarestadoLoading(true)
-          cambiarejecutarBorrar(true)
-        }else{
-          cambiarestadoCompleto(true)
-          cambiarestadoLoading(false)
-          cambiarEstadoAlerta(true);
-          cambiarTipoMensaje({tipo:"error",mensaje:'CHOOSE AT LEAST ONE IMAGE'})
-         
-        }
-       let elementos = document.getElementsByName('checkeables');
-       elementos.forEach((elemento,index)=>{
-        elemento.checked=false
-       })
-      }}><i className="fa-solid fa-trash-can"></i></span>
-      </div>
+     
       {(vectorFotos)
         ?
          <>

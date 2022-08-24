@@ -256,7 +256,7 @@
    }
 
    .centrarNuevo{
-    border-bottom: 4px solid rgb(226, 163, 241,.3);
+    background: red;
     width: 100%;
     justify-content: center;
     align-self: center;

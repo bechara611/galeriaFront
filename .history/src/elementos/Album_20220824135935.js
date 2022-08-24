@@ -179,11 +179,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
     <div className="contenedor-fotos-padre">
     
       <div className="contenedor-fotos">
-      
       <div className="contenedorIconoBorrar">
-      <div className="centrarNuevo">
-      <p className='tituloPhotos'>YOUR PHOTOS</p>
-      </div>
       <span className='iconoBorrar' onClick={(e)=>{
   
         if(vectorEliminarEstado.length>0){
