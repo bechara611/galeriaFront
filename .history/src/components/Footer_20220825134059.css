@@ -3,8 +3,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    align-self: center;
-    text-align: center;
     margin-top: 35px;
     /* background: linear-gradient(to right, rgb(184, 116, 230,1) 10%, rgb(125, 88, 194,1) 50%, rgb(207, 88, 128,1) 60%); */
     background: rgb(255, 255, 255);
@@ -13,8 +11,7 @@
     display: flex;
     align-self: center;
     justify-content: center;
-    align-self: center;
-    text-align: center;
+  
 }
 
 .link-red {
@@ -41,21 +38,5 @@
         width:70px;
        display: inline-block;
        font-size: 30px;
-   }
-}
-@media(max-width:268px){
-    .link-red {
-   
-        width:50px;
-       display: inline-block;
-       font-size: 30px;
-   }
-}
-@media(max-width:199px){
-    .link-red {
-   
-        width:30px;
-       display: inline-block;
-       font-size: 25px;
    }
 }

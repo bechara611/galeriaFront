@@ -52,8 +52,7 @@ const FormularioRegister = ({estadoAlerta,cambiarEstadoAlerta,cambiarTipoMensaje
              if(data.data.Token){
                 localStorage.removeItem('token');
                 localStorage.setItem('token',data.data.Token)
-                localStorage.removeItem('uid');
-                localStorage.setItem('uid',data.data.idGlobal)
+           
              }
              navegar('/Gallery');
              return data.data

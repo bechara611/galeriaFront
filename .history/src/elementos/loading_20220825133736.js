@@ -21,7 +21,7 @@ const slideDown2 = keyframes`
  
 const LoadingSVG = styled(loading)`
     z-index: 100000000000000000000000000000000000000000;
-    width: 5vw;
+    width: 7vw;
     fill:red;
     color:red;
     opacity:.6;

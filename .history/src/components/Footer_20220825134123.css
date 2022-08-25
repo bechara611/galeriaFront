@@ -43,19 +43,3 @@
        font-size: 30px;
    }
 }
-@media(max-width:268px){
-    .link-red {
-   
-        width:50px;
-       display: inline-block;
-       font-size: 30px;
-   }
-}
-@media(max-width:199px){
-    .link-red {
-   
-        width:30px;
-       display: inline-block;
-       font-size: 25px;
-   }
-}

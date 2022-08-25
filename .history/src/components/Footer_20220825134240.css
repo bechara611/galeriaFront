@@ -51,11 +51,3 @@
        font-size: 30px;
    }
 }
-@media(max-width:199px){
-    .link-red {
-   
-        width:30px;
-       display: inline-block;
-       font-size: 25px;
-   }
-}
