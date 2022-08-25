@@ -12,7 +12,7 @@ import * as React from 'react';
 import Stack from '@mui/material/Stack';
 
 import CircularProgress from '@mui/material/CircularProgress';
-
+import LinearWithValueLabel from './progress';
 
 
 const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMensaje,estadoCompleto,cambiarestadoCompleto,estadoLoading,cambiarestadoLoading }) => {
@@ -134,7 +134,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
     <>
     {estadoLoading 
       ?
-      <><Loading tipo={'none'}
+      <><Loading nonito
       estadoLoading={estadoLoading}
       cambiarestadoLoading={cambiarestadoLoading}
       estadoCompleto={estadoCompleto}

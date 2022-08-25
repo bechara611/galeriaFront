@@ -24,7 +24,7 @@
     min-height: 100%;
     min-width: 30vw;
     max-width: 90vw;
-   transition: all 4s ease;
+   transition: all 1s ease;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,10 +37,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: all 4s ease;
 }
 .titulo-subir{
-    transition: all 4s ease;
     align-items: center;
     margin-top: 10px;
     font-size: 25px;
@@ -50,7 +48,6 @@
     }
     
 .contenedor-form-subir{
-    transition: all 4s ease;
     z-index: 1;
     display: flex;
     flex-direction: row;
@@ -302,9 +299,6 @@
    }
 
    .centrarloading{
-    z-index: 1000000000000000000000000000000000000000000000000000;
-transition: all 4s ease;
-   
     display: flex;
     flex-direction: row;
     justify-content: center;

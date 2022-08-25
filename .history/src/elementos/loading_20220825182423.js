@@ -1,3 +1,4 @@
+import { css } from 'jquery';
 import React,{useEffect} from 'react';
 import styled,{keyframes} from 'styled-components'
 import {ReactComponent as loading} from './../imagenes/loading.svg'
@@ -59,7 +60,7 @@ const Contenedor = styled.div`
 
 
 
-const Loading = ({estadoLoading, cambiarestadoLoading,estadoCompleto,cambiarestadoCompleto,tipo='flex'}) => {
+const Loading = ({estadoLoading, cambiarestadoLoading,estadoCompleto,cambiarestadoCompleto}) => {
 useEffect(()=>{
 
     
@@ -87,7 +88,7 @@ if (estadoLoading===true) {
         <>
         {estadoLoading===true
             ?
-            <Contenedor tipo={tipo}>
+            <Contenedor>
            <LoadingSVG></LoadingSVG>
            </Contenedor>
             :

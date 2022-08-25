@@ -35,31 +35,20 @@ const LoadingSVG = styled(loading)`
 
 const Contenedor = styled.div`
  z-index: 1000000000000000000000000000000000000000000;
-   
+   display:none;
     width:100%;
     left: 0;
     top: 1.25rem; /* 20px */
     position: fixed;
-   display:flex;
-   display:${props=>props.flexito ? 'flex': 'none'};
+    display: flex;
     justify-content: center;
     align-items: center;
-    animation: ${slideDown2} 2s infinite; 
-
-    display: ${(props) => {
-            if(props.tipo === 'flex'){
-                return "flex";
-            } else if (props.tipo === 'none') {
-                return "none";
-            } else {
-                return 'flex';
-            }}}
-
+    animation: ${slideDown2} 2s infinite;
 `
 
 
 
-const Loading = ({estadoLoading, cambiarestadoLoading,estadoCompleto,cambiarestadoCompleto,tipo='flex'}) => {
+const Loading = ({estadoLoading, cambiarestadoLoading,estadoCompleto,cambiarestadoCompleto}) => {
 useEffect(()=>{
 
     
@@ -87,7 +76,7 @@ if (estadoLoading===true) {
         <>
         {estadoLoading===true
             ?
-            <Contenedor tipo={tipo}>
+            <Contenedor>
            <LoadingSVG></LoadingSVG>
            </Contenedor>
             :

@@ -50,6 +50,7 @@
     }
     
 .contenedor-form-subir{
+    min-height: 100px;
     transition: all 4s ease;
     z-index: 1;
     display: flex;
@@ -302,9 +303,6 @@
    }
 
    .centrarloading{
-    z-index: 1000000000000000000000000000000000000000000000000000;
-transition: all 4s ease;
-   
     display: flex;
     flex-direction: row;
     justify-content: center;

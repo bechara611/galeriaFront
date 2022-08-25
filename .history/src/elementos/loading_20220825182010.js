@@ -1,3 +1,4 @@
+import { css } from 'jquery';
 import React,{useEffect} from 'react';
 import styled,{keyframes} from 'styled-components'
 import {ReactComponent as loading} from './../imagenes/loading.svg'
@@ -44,22 +45,21 @@ const Contenedor = styled.div`
    display:${props=>props.flexito ? 'flex': 'none'};
     justify-content: center;
     align-items: center;
-    animation: ${slideDown2} 2s infinite; 
+    animation: ${slideDown2} 2s infinite;
+    
+    ${props=>props.flexito && css`
+    display: flex;
+    `}
+    ${props=>props.nonito && css`
+    display: none;
+    `}
 
-    display: ${(props) => {
-            if(props.tipo === 'flex'){
-                return "flex";
-            } else if (props.tipo === 'none') {
-                return "none";
-            } else {
-                return 'flex';
-            }}}
-
+    
 `
 
 
 
-const Loading = ({estadoLoading, cambiarestadoLoading,estadoCompleto,cambiarestadoCompleto,tipo='flex'}) => {
+const Loading = ({estadoLoading, cambiarestadoLoading,estadoCompleto,cambiarestadoCompleto}) => {
 useEffect(()=>{
 
     
@@ -87,7 +87,7 @@ if (estadoLoading===true) {
         <>
         {estadoLoading===true
             ?
-            <Contenedor tipo={tipo}>
+            <Contenedor>
            <LoadingSVG></LoadingSVG>
            </Contenedor>
             :

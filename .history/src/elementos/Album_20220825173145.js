@@ -11,8 +11,7 @@ import Loading from './loading';
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
 
-import CircularProgress from '@mui/material/CircularProgress';
-
+import LinearProgress from '@mui/material/LinearProgress';
 
 
 const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMensaje,estadoCompleto,cambiarestadoCompleto,estadoLoading,cambiarestadoLoading }) => {
@@ -134,7 +133,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
     <>
     {estadoLoading 
       ?
-      <><Loading tipo={'none'}
+      <><Loading
       estadoLoading={estadoLoading}
       cambiarestadoLoading={cambiarestadoLoading}
       estadoCompleto={estadoCompleto}
@@ -176,21 +175,14 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
 
          
           </div>
-          {
-            (estadoLoading)?
-            <>
-            <div className=" centrarloading">
-            <Stack sx={{ color: 'grey.500' }} spacing={2} direction="row">
-            <CircularProgress color="secondary" />
-           
-          </Stack>
-            </div>
-          
-            </>:
-            
-            <></>
-          }
-          
+        
+          <div className="row">
+          <Stack sx={{ width: '100%', color: 'grey.500' }} spacing={2}>
+          <LinearProgress color="secondary" />
+         
+        </Stack>
+          </div>
+        
 
         </div>
       </div>

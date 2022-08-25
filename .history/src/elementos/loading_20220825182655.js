@@ -1,3 +1,4 @@
+import { css } from 'jquery';
 import React,{useEffect} from 'react';
 import styled,{keyframes} from 'styled-components'
 import {ReactComponent as loading} from './../imagenes/loading.svg'

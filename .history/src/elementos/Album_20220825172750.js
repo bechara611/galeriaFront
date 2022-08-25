@@ -10,7 +10,6 @@ import Loading from './loading';
 
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
-
 import CircularProgress from '@mui/material/CircularProgress';
 
 
@@ -134,7 +133,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
     <>
     {estadoLoading 
       ?
-      <><Loading tipo={'none'}
+      <><Loading
       estadoLoading={estadoLoading}
       cambiarestadoLoading={cambiarestadoLoading}
       estadoCompleto={estadoCompleto}
@@ -172,25 +171,19 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
                 return
               }
             }}></input>
-         
+           
+            <Stack sx={{ color: 'grey.500' }} spacing={2} direction="row">
+            <CircularProgress color="secondary" />
+            <CircularProgress color="success" />
+            <CircularProgress color="inherit" />
+          </Stack>
+
 
          
           </div>
-          {
-            (estadoLoading)?
-            <>
-            <div className=" centrarloading">
-            <Stack sx={{ color: 'grey.500' }} spacing={2} direction="row">
-            <CircularProgress color="secondary" />
-           
-          </Stack>
-            </div>
-          
-            </>:
-            
-            <></>
-          }
-          
+        
+        
+        
 
         </div>
       </div>

@@ -134,7 +134,7 @@ const Album = ({ estadoAlerta, cambiarEstadoAlerta, tipoMensaje, cambiarTipoMens
     <>
     {estadoLoading 
       ?
-      <><Loading tipo={'none'}
+      <><Loading tipo={'flex'}
       estadoLoading={estadoLoading}
       cambiarestadoLoading={cambiarestadoLoading}
       estadoCompleto={estadoCompleto}

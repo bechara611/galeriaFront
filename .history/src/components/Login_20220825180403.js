@@ -27,12 +27,11 @@ const InicioDeSesion = ({estadoAlerta,cambiarEstadoAlerta,tipoMensaje,cambiarTip
          }
          {estadoLoading 
           ?
-          <><Loading   tipo={'flex'}
+          <><Loading flexito
           estadoLoading={estadoLoading}
           cambiarestadoLoading={cambiarestadoLoading}
           estadoCompleto={estadoCompleto}
           cambiarestadoCompleto={cambiarestadoCompleto}
-          
           >
           
           </Loading>

@@ -303,7 +303,7 @@
 
    .centrarloading{
     z-index: 1000000000000000000000000000000000000000000000000000;
-transition: all 4s ease;
+
    
     display: flex;
     flex-direction: row;
