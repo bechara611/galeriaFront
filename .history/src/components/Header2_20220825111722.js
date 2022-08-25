@@ -20,7 +20,9 @@ const HeaderPrincial2 = () => {
         
         <div className="contenedor-menu">
         <div className="cajaIcono">
-    
+        // <i className="fa-solid icono fa-user-pen"></i>
+        
+        // <p className='textoIcono'>User</p>
         </div>
        <div className="cajaIcono" onClick={(e)=>{
         localStorage.removeItem('token');

@@ -8,6 +8,7 @@
     background: rgb(255, 255, 255);
 }
 .contenedor-footer{
+   
     display: flex;
     align-self: center;
     justify-content: center;
@@ -15,8 +16,8 @@
 }
 
 .link-red {
-   
-     width:70px;
+    font-size: 40px;
+  width:50px;
     display: inline-block;
     font-size: 40px;
 }
@@ -31,5 +32,3 @@
 .github:hover{color: #2c184b;}
 .whatssap:hover{color: #098536;}
 .linkdin:hover{color: #045986;}
-
-

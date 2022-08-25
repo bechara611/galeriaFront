@@ -8,6 +8,7 @@
     background: rgb(255, 255, 255);
 }
 .contenedor-footer{
+    width: 100%;
     display: flex;
     align-self: center;
     justify-content: center;
@@ -33,3 +34,4 @@
 .linkdin:hover{color: #045986;}
 
 
+.tituloFooter{width: 100%;}

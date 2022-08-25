@@ -8,7 +8,9 @@ const FooterComponente = () => {
     return (
         <>
         <footer className="container-fluid footer">
-       
+        <div className="contenedor-titulo">
+        <p className='tituloFooter'>Created by Dany Bechara</p>
+        </div>
         <div className="col contenedor-footer">
         <a className='link-red linkdin'target={blank} href={linkdn}><i className="fa-brands fa-linkedin iconosRedes "></i></a>
         <a className='link-red correo' target={blank} href={correo}><i className="fa-solid fa-envelope iconosRedes"></i></a>
