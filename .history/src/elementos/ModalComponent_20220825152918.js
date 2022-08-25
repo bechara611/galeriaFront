@@ -6,7 +6,7 @@ const Modal = ({index,elemento}) => {
     let split= elemento.img.split('/');
     split[5]=split[5]+'/fl_attachment'
     link=split.join('/')
-
+    console.log(link)
     return (
         <div className="modal" id={"Modal-"+index} tabIndex={-1} aria-hidden="true" aria-labelledby="label-modal-1">
             <div className="modal-dialog modal-lg text-center">

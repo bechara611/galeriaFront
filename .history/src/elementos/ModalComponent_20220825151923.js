@@ -2,11 +2,6 @@ import './ModalComponente.css'
 
 const Modal = ({index,elemento}) => {
     const blank='_blank'
-    let link = ''
-    let split= elemento.img.split('/');
-    split[5]=split[5]+'/fl_attachment'
-    link=split.join('/')
-
     return (
         <div className="modal" id={"Modal-"+index} tabIndex={-1} aria-hidden="true" aria-labelledby="label-modal-1">
             <div className="modal-dialog modal-lg text-center">
@@ -26,9 +21,10 @@ const Modal = ({index,elemento}) => {
                         // /https://res.cloudinary.com/dscpbsjbj/image/upload/v1661356252/ebxjwicihs7rpedwceft.jpg
                         <>
                   <a href={elemento.img} target={blank} className='btn btn-success btn-sm'>Open</a>
-                
-                  <a href={link}>Download</a>
-                 
+                  <a href={elemento.img} download rel="noopener noreferrer" target="_blank">
+                  <a href="https://res.cloudinary.com/demo/image/upload/fl_attachment/sample.jpg">Download</a>
+                  Download File
+               </a>
                   </>
                     }
                         
