@@ -20,7 +20,8 @@ const Modal = ({index,elemento}) => {
                     {
                         <>
                   <a href={elemento.img} target={blank} className='btn btn-success btn-sm'>Open</a>
-                 
+                  <a href={elemento.img} download="image.jpg" target={blank} className='btn btn-success btn-sm'>download</a>
+                  <a href={elemento.img} download>Download2</a>
                   </>
                     }
                         

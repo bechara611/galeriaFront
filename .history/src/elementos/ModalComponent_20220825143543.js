@@ -20,7 +20,10 @@ const Modal = ({index,elemento}) => {
                     {
                         <>
                   <a href={elemento.img} target={blank} className='btn btn-success btn-sm'>Open</a>
-                 
+                  <a href={elemento.img} download="image.jpg" target={blank} className='btn btn-success btn-sm'>download</a>
+                  <a href="http://static.hogarmania.com/archivos/201204/estrenimiento-gato-bebe2-xl-668x400x80xX.jpg" download="cute.jpg">
+  <img src="http://static.hogarmania.com/archivos/201204/estrenimiento-gato-bebe2-xl-668x400x80xX.jpg" width="250" />
+</a>
                   </>
                     }
                         

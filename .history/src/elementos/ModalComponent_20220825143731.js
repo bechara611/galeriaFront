@@ -1,6 +1,7 @@
 import './ModalComponente.css'
 
 const Modal = ({index,elemento}) => {
+    
     const blank='_blank'
     return (
         <div className="modal" id={"Modal-"+index} tabIndex={-1} aria-hidden="true" aria-labelledby="label-modal-1">
@@ -20,7 +21,10 @@ const Modal = ({index,elemento}) => {
                     {
                         <>
                   <a href={elemento.img} target={blank} className='btn btn-success btn-sm'>Open</a>
-                 
+                  <a href={elemento.img} download="image.jpg" target={blank} className='btn btn-success btn-sm'>download</a>
+                  <a href={elemento.img} download="cute.jpg">
+  <img src={elemento.img} width="250" />
+</a>
                   </>
                     }
                         
